@@ -141,11 +141,6 @@ class TerminfoJsonController extends ControllerBase {
 
     $output = $this->basicCollectionTermTableArray($vid, $terms);
 
-    if ($vid == 'selectquestion') {
-      $terms = \Drupal::getContainer()->get('flexinfo.term.service')->getFullTermsFromVidName('questionlibrary');
-      $output = $this->basicCollectionTermTableArray($vid, $terms, $edit_link_column = FALSE);
-    }
-
     return $output;
   }
 

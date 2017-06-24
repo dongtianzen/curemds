@@ -176,12 +176,8 @@ class ManageinfoController extends ControllerBase {
     $ManageinfoTableContent = new ManageinfoTableContent();
 
     $path_args = \Drupal::getContainer()->get('flexinfo.setting.service')->getCurrentPathArgs();
-    if ($path_args[1] == 'manageinfo' && $path_args[2] == 'selectquestion') {
-      $json_content_data = $ManageinfoTableContent->tableContentToCommonTable($section, $entity_id, $start, $end);
-    }
-    else {
-      $json_content_data = $ManageinfoTableContent->tableContentToCommonPhpTable($section, $entity_id, $start, $end);
-    }
+
+    $json_content_data = $ManageinfoTableContent->tableContentToCommonTable($section, $entity_id, $start, $end);
 
     return $json_content_data;
   }
