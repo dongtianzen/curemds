@@ -1,0 +1,109 @@
+.dataTables_filter label input, .dataTables_length label select {
+  height: 32px;
+  width: 150px;
+  color: #000;
+  content: 'something';
+  float: right;
+  border: 0px;
+  background-color: #eee;
+  font-weight: 400;
+  font-size: 90% !important;
+  padding-left: 10px;
+}
+.dataTables_wrapper table {
+  border-bottom: none !important;
+}
+.dataTables_wrapper table.dataTable thead th, table.dataTable thead td {
+  border-bottom: none !important;
+}
+/*.dataTables_wrapper table.dataTable thead th {
+  padding-left:0px !important;
+}*/
+.dataTables_wrapper .dataTables_paginate .paginate_button.current {
+  background-color: none !important;
+  background: none !important;
+  border: none !important;
+}
+.dataTables_length {
+  text-align: :right;
+}
+
+.manageinfo-question-library .fixed-center {
+  position:fixed;
+  top:50%;
+  left:50%;
+  z-index: 900;
+}
+
+/*Labels*/
+.manageinfo-question-library md-input-container label {
+  color:#404040;
+  font-weight: 400;
+}
+.manageinfo-question-library .md-input-focused label,
+.manageinfo-question-library .md-input-has-value label {
+  padding: 0px;
+  font-size: 18px;
+  color: #0095c6 !important;
+}
+
+.manageinfo-question-library .table-top-add-button a {
+  width: 25px !important;
+  height: 25px !important;
+  min-height: 0px;
+  background-color: #a5d23e !important;
+  margin-top: 0px;
+  transition: all .2s ease-in-out;
+}
+.manageinfo-question-library .table-top-add-button a:hover {
+  width: 25px;
+  height: 25px;
+  min-height: 0px;
+  background-color: rgb(255,87,34) !important;
+  transform: scale(1.1);
+}
+.manageinfo-question-library .table-top-add-button md-icon {
+  font-size: 14px;
+  display: table-cell;
+  padding-top: 4px;
+  min-width: 12px;
+}
+
+.manageinfo-question-library .table-top-remove-button a {
+  width: 25px !important;
+  height: 25px !important;
+  min-height: 0px;
+  background-color: #e93a8d !important;
+  margin-top: 0px;
+  transition: all .2s ease-in-out;
+}
+.manageinfo-question-library .table-top-remove-button a:hover {
+  width: 25px;
+  height: 25px;
+  min-height: 0px;
+  background-color: red !important;
+  transform: scale(1.1);
+}
+.manageinfo-question-library .table-top-remove-button md-icon {
+  font-size: 14px;
+  display: table-cell;
+  padding-top: 4px;
+  min-width: 12px;
+}
+
+/*Button save*/
+.manageinfo-question-library .pageinfo-btn-saved {
+  color: #fff !important;
+  background-color: #0095c6 !important;
+  font-size: 14px;
+  transition: all .2s ease-in-out;
+}
+.manageinfo-question-library .pageinfo-btn-saved:not([disabled]):hover {
+  background-color: #0082ad !important;
+  color: white;
+  transform: scale(1.1);
+}
+.manageinfo-question-library .pageinfo-btn-saved[disabled] {
+  color: rgb(187, 187, 187);
+  background-color: rgba(230, 230, 229, 0.96);
+}

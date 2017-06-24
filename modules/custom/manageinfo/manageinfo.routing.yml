@@ -1,0 +1,76 @@
+manageinfo.angular.json:
+  path: '/manageinfo/angular/json/{tid}'
+  defaults:
+    _controller: '\Drupal\manageinfo\Controller\ManageinfoController::angularJson'
+    _title: 'Angular Form Json'
+  requirements:
+    _permission: 'access content'
+    _role: 'authenticated'
+
+manageinfo.entity.add.form:
+  path: '/manageinfo/{entity}/{bundle}/add/form/{nid}'
+  defaults:
+    _controller: '\Drupal\manageinfo\Controller\ManageinfoController::entityAddForm'
+  requirements:
+    _permission: 'access content'
+    _role: 'authenticated'
+
+manageinfo.entity.add.json:
+  path: '/manageinfo/{entity}/{bundle}/add/json/{nid}'
+  defaults:
+    _controller: '\Drupal\manageinfo\Controller\ManageinfoController::entityAddJson'
+  requirements:
+    _permission: 'access content'
+    _role: 'authenticated'
+
+manageinfo.entity.edit.form:
+  path: '/manageinfo/{entity}/{nid}/edit/form'
+  defaults:
+    _controller: '\Drupal\manageinfo\Controller\ManageinfoController::entityEditForm'
+  requirements:
+    _permission: 'access content'
+    _role: 'authenticated'
+
+manageinfo.entity.edit.json:
+  path: '/manageinfo/{entity}/{nid}/edit/json'
+  defaults:
+    _controller: '\Drupal\manageinfo\Controller\ManageinfoController::entityEditJson'
+  requirements:
+    _permission: 'access content'
+    _role: 'authenticated'
+
+manageinfo.standard.json:
+  path: '/manageinfo/{section}/json/{entity_id}/{start}/{end}'
+  defaults:
+    _controller: '\Drupal\manageinfo\Controller\ManageinfoController::standardJson'
+    _title: 'Manageinfo List Json'
+  requirements:
+    _permission: 'access content'
+    _role: 'authenticated'
+
+manageinfo.standard.list:
+  path: '/manageinfo/{section}/list/{entity_id}/{start}/{end}'
+  defaults:
+    _controller: '\Drupal\manageinfo\Controller\ManageinfoController::standardList'
+    _title: 'Manageinfo List'
+  requirements:
+    _permission: 'access content'
+    _role: 'authenticated'
+
+manageinfo.standard.table:
+  path: '/manageinfo/{section}/table/{entity_id}/{start}/{end}'
+  defaults:
+    _controller: '\Drupal\manageinfo\Controller\ManageinfoController::standardTable'
+    _title: 'Manageinfo table'
+  requirements:
+    _permission: 'access content'
+    _role: 'authenticated'
+
+manageinfo.standard.menu.item:
+  path: '/manageinfo/{section}/list/{entity_id}'
+  defaults:
+    _controller: '\Drupal\manageinfo\Controller\ManageinfoController::standardMenuItem'
+    _title: 'Manageinfo List'
+  requirements:
+    _permission: 'access content'
+    _role: 'authenticated'

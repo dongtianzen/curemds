@@ -1,0 +1,158 @@
+html {
+  height: 100% !important;
+  overflow: hidden;
+}
+body .navbar.navbar-default {
+  display:none;
+}
+body footer {
+  display: none;
+}
+body > .container {
+  width: 100%;
+  padding: 0;
+  height: 100%;
+}
+body > .container > .row {
+  height: 100%;
+  margin:  0;
+}
+body > .container > .row > section {
+  height: 100%;
+  padding: 0;
+}
+body > .container > .row > section .region-content {
+  height: 100%;
+}
+
+#MildderInfoRegister {
+  display: table;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  padding: 10px 0;
+  text-align: center;
+  color: #fff;
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../images/intro_bg.jpg) no-repeat center center fixed;
+  background-color: #000;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+#MildderInfoRegister .register-form-outer-wrapper {
+  width: 430px;
+  display: table-cell;
+  vertical-align: middle;
+}
+#MildderInfoRegister .register-form-inner-wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #fff;
+  width: 430px;
+}
+.register-form-inner-wrapper .register-logo-wrapper {
+  padding-top: 6px;
+}
+@media(max-width: 768px) {
+  #MildderInfoRegister .register-form-inner-wrapper {
+    width: 310px;
+  }
+}
+@media(max-width: 1500px) {
+  .register-form-inner-wrapper .register-logo-wrapper {
+    display: none;
+  }
+}
+.register-form-inner-wrapper md-content md-input-container {
+  margin: 6px 0px;
+}
+.register-form-inner-wrapper md-content md-input-container.username-container {
+  margin-top: 16px;
+}
+.register-form-inner-wrapper md-content md-input-container label,
+.register-form-inner-wrapper md-content md-input-container md-select,
+.register-form-inner-wrapper md-content md-input-container .md-input-messages-animation {
+  text-align: left;
+  font-weight:  normal;
+}
+
+.register-form-inner-wrapper md-content {
+  background-color: #fff;
+}
+
+.register-form-inner-wrapper .btn-submit,
+.register-dialogbox .btn-submit {
+  color: #fff;
+  background: #009ddf;
+  border: 0;
+  border-radius: 0px;
+  padding: 8px 24px;
+  margin: 0 8px 30px 0px;
+  font-size: 1.0em;
+  font-weight: 600;
+  text-transform: uppercase;
+  width: auto;
+  height: auto;
+  min-width: 100px;
+  line-height: 2.142;
+  transition:font-size .2s ease-in-out;
+}
+
+.register-form-inner-wrapper .btn-submit:hover,
+.register-form-inner-wrapper .btn-submit.focus,
+.register-form-inner-wrapper .btn-submit:focus,
+.register-form-inner-wrapper .btn-submit:active:hover,
+.register-form-inner-wrapper .btn-submit:active:focus,
+.register-form-inner-wrapper .btn-submit.active,
+.register-dialogbox .btn-submit:hover,
+.register-dialogbox .btn-submit.focus,
+.register-dialogbox .btn-submit:focus,
+.register-dialogbox .btn-submit:active:hover,
+.register-dialogbox .btn-submit:active:focus,
+.register-dialogbox .btn-submit.active {
+  color: #fff;
+  background-color: #ec247f !important;
+}
+/* @media(min-width: 992px) {
+  #MildderInfoRegister .register-form-inner-wrapper {
+    width: 310px;
+  }
+} */
+@media(max-width: 768px) {
+  .register-form-inner-wrapper .btn-submit {
+    font-size: 0.8em;
+    padding: 8px 18px;
+    transition:font-size .2s ease-in-out;
+  }
+}
+.register-dialogbox .btn-submit {
+  border-radius: 30px;
+}
+
+.register-form-inner-wrapper .recaptcha-wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  width: 250px;
+}
+.register-form-inner-wrapper .recaptcha-wrapper p {
+  color:  #000;
+}
+.register-form-inner-wrapper .g-recaptcha div {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.register-form-inner-wrapper .g-recaptcha {
+  transform:scale(0.80);
+  transform-origin:0 0;
+}
+.register-dialogbox md-dialog-content {
+  min-height:  230px;
+}
+
+md-dialog.register-dialogbox {
+  border-radius:  14px;
+}
+

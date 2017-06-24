@@ -1,0 +1,18 @@
+<?php
+
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function dashpage_form_user_login_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  // Alter login form and add own custom submit handler.
+  $form['#submit'][] = '_dashpage_user_login_form_submit';
+}
+
+/**
+ * Custom submit handler for login form.
+ */
+function _dashpage_user_login_form_submit($form, FormStateInterface $form_state) {
+  $form_state->setRedirect('<front>');
+}

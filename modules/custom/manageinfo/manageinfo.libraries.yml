@@ -1,0 +1,26 @@
+angular_form:
+  css:
+    theme:
+      css/angular_form.css: {}
+  js:
+    angular/angular_form.js: {}
+  dependencies:
+    - fxt/angular.angularjs
+
+angular_drag_form:
+  css:
+    theme:
+      css/angular_form.css: {}
+  js:
+    angular/angular_drag_form.js: {}
+  dependencies:
+    - fxt/angular.angularjs
+
+select_question_list:
+  css:
+    theme:
+      css/select_question_list.css: {}
+  js:
+    angular/select_question_list.js: {}
+  dependencies:
+    - fxt/angular.angularjs

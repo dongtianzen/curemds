@@ -1,0 +1,67 @@
+html {
+  height: 100% !important;
+  overflow: hidden;
+}
+
+html body footer {
+  display: none;
+}
+
+html body .navbar.navbar-default {
+  overflow: hidden;
+  display: none;
+}
+
+html body .container {
+  width: 100%;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+html body .container .row, html body .container .row section, html body .container .row section .region-content {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+#MildderInfoRegister {
+  width: 100%;
+  height: 100%;
+  padding: 10px 0;
+  text-align: center;
+  color: #fff;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0.1))), url(../images/intro_bg.jpg) no-repeat center center fixed;
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../images/intro_bg.jpg) no-repeat center center fixed;
+  background-color: #000;
+  background-attachment: fixed;
+  background-size: "cover";
+  -o-background-size: "cover";
+}
+
+.btn-default, .btn-submit {
+  color: #fff;
+  border: 0;
+  border-radius: 0px;
+  padding: 8px 24px;
+  margin: 0 8px 30px 0px;
+  font-size: 1.0em;
+  font-weight: 600;
+  text-transform: uppercase;
+  width: auto;
+  height: auto;
+  min-width: 100px;
+  line-height: 2.142;
+  -webkit-transition: font-size .2s ease-in-out;
+  transition: font-size .2s ease-in-out;
+}
+
+.btn-submit {
+  background-color: #009ddf;
+}
+
+.btn-submit:hover, .btn-submit:active, .btn-submit:focus, .btn-submit.focus, .btn-submit:active:hover, .btn-submit:active:focus {
+  background-color: #ec247f;
+}
+
+/*# sourceMappingURL=../dist/scss/register_page.css.map */

@@ -1,0 +1,121 @@
+/**
+ * Place your custom styles here.
+ */
+
+body .region,
+body .region-content {
+ font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  color: #002840;
+}
+
+.region-navigation nav {
+  float: left;
+  margin-left: 24px;
+}
+
+.region-navigation .logo.navbar-btn img {
+  height: 72px;
+}
+
+.region .navbar-default.max-width-inherit {
+  max-width: inherit;
+}
+
+.region-content > h1 {
+  display: none;
+}
+
+
+/**
+ * user login page
+ */
+ body.path-user {
+  background-image: url("../image/bg.png");
+  background-repeat: no-repeat;
+  min-height: 640px;
+  display: table;
+  width: 100%;
+  height: auto;
+  padding: 100px 0;
+  text-align: center;
+  color: #fff;
+  background-color: #000;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  padding: 40px 0 140px;
+}
+body.user-logged-in.path-user {
+  background-image: none;
+  background-color: #fff;
+
+}
+
+.user-logged-in.path-user .main-container {
+  background-image: none;
+}
+
+.path-user .region-content > .tabs {
+  display: none;
+}
+.user-logged-in.path-user .region-content > .tabs {
+  display: none;
+}
+
+.user-login-form .form-actions .btn .glyphicon-log-in {
+  display: none;
+}
+
+.region-content .user-login-form{
+  width: 300px;
+  display: block;
+  margin: 80px auto 20px;
+  min-height: 500px;
+  background-image: url("../image/bi_kpi.png");
+  background-repeat: no-repeat;
+  background-position: 104px 108px;
+  background-color: #fff;
+}
+
+.region-content .user-login-form .form-item {
+  width: 280px;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: -32px;
+}
+
+.region-content .user-login-form .form-item:first-child {
+  padding-top: 260px;
+}
+
+/**
+ * Feedback form
+ */
+.contact-message-feedback-form,
+.contact-message-custom-feedback-form {
+  width: 480px;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.contact-message-custom-feedback-form .js-form-item-copy {
+  display: none;
+}
+
+/**
+ * only work for evaluation node page
+ */
+#reactset-table.table {
+  margin-top: 24px;
+}
+
+/**
+ * metismenu
+ */
+.metismenu li.metismenu-item-link {
+  line-height: 40px;
+}

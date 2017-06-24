@@ -1,0 +1,4 @@
+[submodule "modules/custom/flexrepo"]
+	path = modules/custom/flexrepo
+	url = https://github.com/flexxia/flexrepo.git
+	branch = master

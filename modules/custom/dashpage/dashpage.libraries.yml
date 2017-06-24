@@ -1,0 +1,28 @@
+angular_snapshot:
+  css:
+    theme:
+      css/angular_snapshot.css: {}
+  js:
+    angular/angular_snapshot.js: {}
+  dependencies:
+    - fxt/angular.angularjs
+
+guide_page:
+  css:
+    theme:
+      css/guide_page.css: {}
+  js:
+    angular/guide_page.js: {}
+    angular/smooth_scroll.js: {}
+  dependencies:
+    - fxt/angular.angularjs
+
+register_page:
+  css:
+    theme:
+      css/register_page.css: {}
+  js:
+    angular/register_page.js: {}
+    angular/smooth_scroll.js: {}
+  dependencies:
+    - fxt/angular.angularjs

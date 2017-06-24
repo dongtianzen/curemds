@@ -1,0 +1,42 @@
+<md-dialog flex="35" class="speaker-summary-popup-wrapper">
+  <form>
+    <md-dialog-content class="padding-0">
+      <div class="text-center color-fff bg-00a9e0 padding-20">
+        <span class="{{speakerSummary.pageInfo.class}}">{{speakerSummary.pageInfo.title}}</span>
+      </div>
+      <md-tabs id="tab1" md-dynamic-height="">
+        <md-tab md-dynamic-height="" data-ng-repeat="pageTab in speakerSummary.pageTabs" label="{{pageTab.title}}">
+          <md-content class="">
+            <div class="row margin-0 padding-top-24 padding-bottom-24 line-height-1">
+              <div data-ng-repeat="reading in pageTab.tabContent.readings track by $index" id="speaker-summary-popup-{{$index}}" class="col-md-3 text-center padding-0">
+                <span class="font-size-14 font-weight-400">{{reading.value}}</span></br>
+                <span class="font-size-12 font-weight-normal color-989898">{{reading.label}}</span>
+              </div>
+            </div>
+            <md-tabs id="tab2">
+              <md-tab data-ng-repeat="tabData in pageTab.tabContent.tabData" label="{{tabData.title}}">
+                <md-content class="padding-top-12 padding-left-6 padding-right-6">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th class="{{tableHead.width}}" data-ng-repeat="tableHead in tabData.table.thead" class="padding-left-18">{{tableHead.label}}</th>
+                      </tr>
+                    </thead>
+                    <tbody class="font-size-14">
+                      <tr data-ng-repeat="tableRows in tabData.table.tbody" class="color-989898">
+                        <td class="font-weight-normal" data-ng-repeat="tableColumns in tableRows track by $index">{{tableColumns}}
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </md-content>
+              </md-tab>
+            </md-tabs>
+          </md-content>
+        </md-tab>
+      </md-tabs>
+    </md-dialog-content>
+    <md-dialog-actions layout="row">
+    </md-dialog-actions>
+  </form>
+</md-dialog>

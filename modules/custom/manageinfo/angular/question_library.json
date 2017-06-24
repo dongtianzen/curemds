@@ -1,0 +1,3429 @@
+{
+  "contentSection": [
+    {
+      "tableSettings": {
+        "pagination": true,
+        "searchFilter": true,
+        "paginationType": "full_numbers",
+        "searchPlaceholder": "SEARCH"
+      },
+      "value": {
+        "thead": [
+          [
+            "Name",
+            "Type",
+            "Scale",
+            "Label",
+            "Question Type",
+            "Reference",
+            "Edit"
+          ]
+        ],
+        "tbody": [
+          [
+            "?tablir la proc?dure de prise en charge du patient selon une approche m?thodique",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2708\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "?What was the least effective part of the program? Why?",
+            "textfield",
+            "5",
+            null,
+            null,
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2631\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "?What was the most effective part of the program? Why?",
+            "textfield",
+            "5",
+            null,
+            null,
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2632\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Adapter le traitement pharmacologique du patient selon sa cible et ses charact?ristiques",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2633\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Ajuster les traitements pharmacologiques en lien avec l\u0027intensification de l\u0027insulinoth?raphie",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2634\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Analyser les donn?es sur les options de traitement du CPNPC avanc? au Qu?bec et leur accessibilit",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2635\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Analyze evidence and availability of treatment options for advanced NSCLC",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2636\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Analyze the results from cases discussed.",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2637\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Any other comments",
+            "textfield",
+            "5",
+            null,
+            null,
+            7,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2638\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Appliquer dans le quotidien le suivi selon les normes de la loi 41",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2639\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Appliquer des principes",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2640\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Appliquer les ajustements requis dans la gestion du diab?te",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2641\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Appliquer les lignes directrices canadiennes en diab?te",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2642\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Appliquer les techniques d?injections appropri?es",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2643\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Apply current knowledge to the presented cases.",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2644\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Apply patient-directed mealtime insulin titration in clinical practice",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2500\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Apply the content and design of the Conversation Map? tools to our practice",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/3034\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Apply the evidence for initial treatment selection and the impact of that selection regimen on the subsequent treatment options after disease progression",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2501\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Appreciate the mechanism of action of SGLT2 inhibitors in the management of type 2 diabetes",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2502\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Appropriately prescribe SGLT2 inhibitors therapy in patients with T2D",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2645\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Aptitude ? communiquer du conf?rencier",
+            "radios",
+            "4",
+            "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+            null,
+            0,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2646\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Aptitude a? communiquer du confe?rencier(e?re)",
+            "radios",
+            "4",
+            "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+            null,
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2503\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Are you planning to integrate the Conversation Map? tools into your education sessions?",
+            "radios + textfield",
+            "2",
+            "Yes No",
+            null,
+            0,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/3029\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Are you planning to integrate the Conversation Map? tools into your education sessions?",
+            "radios",
+            "2",
+            "Yes No",
+            null,
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/3030\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Are you planning to integrate the Conversation Map? tools into your education sessions?",
+            "textfield",
+            "5",
+            null,
+            null,
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/3031\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Articulate side effects, dosing and appropriate patient profiles for SGLT2 inhibitors therapy",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2647\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Articulate the difference between a subsequent entry biologic and the reference molecule",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            2,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2648\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Articulate the pitfalls of family doctors managing pituitary patients without guidance.",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/3036\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "As a result of attending this program please describe something you may continue:",
+            "textfield",
+            "5",
+            "12345678910",
+            null,
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2649\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "As a result of attending this program please describe something you may start:",
+            "textfield",
+            "5",
+            "12345678910",
+            null,
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2650\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "As a result of attending this program please describe something you may stop:",
+            "textfield",
+            "5",
+            "12345678910",
+            null,
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2651\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "As a result of this workshop, how likely is it that you will perform a self-reflection and critical inquiry exercise on your practice? (For example: CFPC linking to learning to practice, FMOQ annex 13 or 16, patient chart review, etc.)",
+            "textfield",
+            "5",
+            null,
+            null,
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2842\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "As a result of this workshop, how likely is it that you will perform a self-reflection and critical inquiry exercise on your practice? (For example: CFPC linking to learning to practice, FMOQ annex 13 or 16, patient chart review, etc.)",
+            "radios + textfield",
+            "5",
+            "12345678910",
+            null,
+            0,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2652\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "As a result of this workshop, how likely is it that you will perform a self-reflection and critical inquiry exercise on your practice? (For example: CFPC linking to learning to practice, FMOQ annex 13 or 16, patient chart review, etc.)",
+            "radios",
+            "5",
+            "12345678910",
+            null,
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/3012\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Assess the efficacy and safety of antihyperglycemic agents and utilize single or combination therapies in T2DM",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2504\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Assess the impact of A1C levels, declining renal function and frailty on treatment decisions in T2DM",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2505\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Assess, recognize and manage the risks associated with psoriasis therapies",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2506\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Atteinte des objectifs",
+            "radios",
+            "4",
+            "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+            null,
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2507\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Audiovisual Quality",
+            "radios",
+            "4",
+            "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+            null,
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2653\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Autres Besoins De Formation Ressentis",
+            "textfield",
+            "5",
+            null,
+            null,
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2508\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Choose between GLP-1R agonists and basal insulin when initiating injectable therapy",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2509\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Clarity of Presentation",
+            "radios",
+            "4",
+            "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+            null,
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2654\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Clart? de la pr?sentation",
+            "radios",
+            "4",
+            "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+            null,
+            0,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2655\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Clarte? de la pre?sentation",
+            "radios",
+            "4",
+            "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+            null,
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2510\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Clinical Challenges: What Would You Do? Case Studies",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2656\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Comment ce programme se compare-t-il au meilleur programme auquel vous avez particip? au cours des 6 derniers mois?",
+            "checkbox",
+            "2",
+            null,
+            null,
+            0,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2838\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Comment ce programme se compare-t-il au meilleur programme auquel vous avez particip? au cours des 6 derniers mois?",
+            "radios",
+            "5",
+            "12345678910",
+            null,
+            0,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2657\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Comment ce programme se compare-t-il au meilleur programme auquel vous avez particip? au cours des 6 derniers mois?",
+            "radios + checkbox",
+            "5",
+            "12345678910",
+            null,
+            0,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/3021\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Commentaires",
+            "textfield",
+            "5",
+            "12345678910",
+            null,
+            0,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2658\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Comments",
+            "textfield",
+            "5",
+            "12345678910",
+            null,
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2659\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Communication Skills of the Speaker",
+            "radios",
+            "4",
+            "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+            null,
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2660\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Compare and appreciate patient and physician goals\/objectives for psoriasis treatment",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2511\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Compare differences and similarities between GLP-1R agonists",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2661\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Compare differences and similarities between shorter-acting and longer-acting GLP-1R agonists",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2512\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Compare evidence for other \u0022add on\u0022 therapies",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2662\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Comprendre la technique d?entrevue motivationnelle",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2663\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Confirme\/Modifie ma pratique",
+            "radios",
+            "2",
+            "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+            null,
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2513\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Confirms my Practice Or Changes My Practice",
+            "radios",
+            "2",
+            "12345678910",
+            null,
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2664\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Conna?tre les moments ad?quats d?administration pour chaque type d?insuline",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2665\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Consider patient and agent characteristics when individualizing the choice of GLP-1R agonist for patients with type 2 diabetes",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            2,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2514\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Consider patient characteristics when individualizing the choice of         insulin regimen with type 2 diabetes",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            0,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2666\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Consistent with what I expect",
+            "radios",
+            "5",
+            "12345678910",
+            null,
+            2,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2667\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "D\u0027ajuster la prise de glycemie du patient selon son profil et le regime pharmacologique",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2515\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "D\u0027eduquer et motiver les patients afin qu\u0027ils prennent eux memes leur lobalgie en charge",
+            "radios",
+            "5",
+            "12345678910",
+            null,
+            0,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2516\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "D\u0027etablir des cibles glycemiques selon le profil du patient en soins a domicile",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2517\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "D\u0027identifier les defis et les pistes de solutions possibles pour optimiser les soins au patient diabetique en maintien a domicile",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2518\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "D\u0027identifier les options pharmacologiques disponibles dans la prise en charge du diabete de type 2",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2519\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "D?crire les conditions requises pour la conservation de l?insuline",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2668\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "D?crire les effets des exercices a?robiques et ana?robiques sur la glyc?mie",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            2,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2521\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "D?crire les effets des exercices a?robiques et ana?robiques sur la glyc?mie.",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            0,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2669\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "D?finir la fracture vert?brale  Discuter de l\u0027investigation D?finir les cause secondaires  D?finir la place des marqueurs osseux",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2523\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "D?terminer le moment d?injection selon le d?but d?action  des diff?rentes insulines",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2680\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "D?velopper des outils de communications interprofessionnels pour les suivis patients;",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2683\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "De discuter de cas cliniques et de l\u0027ajustement du traitment pharmacolique (anti-hyperglycemiants et insulines) selon le",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2520\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Define treatment failure and appropriate clinical responses",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2522\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Demonstrate communication strategies to overcome challenges in the management of type 2 diabetes",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            2,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2670\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Describe characteristics of drugs classes that support individualized therapy",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2524\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Describe how to start and titrate premixed insulin therapy for patients with type 2 diabetes",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2525\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Describe key counselling tips around SGLT2 inhibitor therapy",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2671\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Describe normal insulin physiology and understand how this influences blood glucose results (including fasting and postprandial sugar as well as A1C)",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2526\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Describe the available evidence for SGLT2 inhibitors in glucose reduction",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2672\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Describe the available evidence for the use of SGLT2 inhibitors in the management of type 2 diabetes.",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2673\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Describe the care gap between evidence-based guidelines for diabetes management and real-life clinical practice",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            2,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2674\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Describe the current state of evidence on transition of care in young adults with type 1 diabetes",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2527\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Describe the different insulin types available in the management of type 2 diabetes",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2675\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Describe the efficacy of SGLT2 inhibitors on A1C, blood pressure and body weight",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2528\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Describe the glucagon-like peptide 1 receptor (GLP-1R) agonists available in Canada",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2529\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Describe the importance of bone quality and its impact on surgical outcomes.",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2676\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Describe the nutritional management in the early stages of CDK and how this changes as the disease progresses",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2677\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Describe the premixed insulin currently available in Canada",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2530\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Describe the rationale and selection of optimal treatments for each line of therapy considering efficacy, quality of life and toxicities of available options.",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2678\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Describe the relative advantages of using GLP-1R agonists at different stages across the spectrum of type 2 diabetes",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2531\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Describe the role of observational studies in monitoring the use of growth hormone.",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/3039\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Describe the safety and efficacy of SEB insulins",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            2,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2679\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Describe the various physician- and patient-directed insulin titration algorithms",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2532\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Describe two key takeaways from this program",
+            "textfield",
+            "5",
+            null,
+            null,
+            9,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2533\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Describe two ways you will change your practice as result of attending this program",
+            "textfield",
+            "5",
+            null,
+            null,
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2534\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Determine moderate fracture risk-patients and their Define treatment failure and appropriate clinical appropriate management",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2535\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Determining priorities when balancing diabetes management and the prevention of progression of CKD with the goal to developing one seamless diet",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2681\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Develop an informed approach in choosing which insulin to start in type 2 diabetes",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2682\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Did the activity comply with the Code of Ethics for Parties Involved in Continuing Medical Education?",
+            "radios",
+            "2",
+            "Yes No",
+            null,
+            9,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2536\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Did you perceive any degree of commercial bias from the speaker?",
+            "textfield",
+            "5",
+            null,
+            null,
+            13,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2839\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Did you perceive any degree of commercial bias from the speaker?",
+            "radios",
+            "2",
+            "Yes No",
+            null,
+            13,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/3013\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Did you perceive any degree of commercial bias from the speaker?",
+            "radios + textfield",
+            "2",
+            "Yes No",
+            null,
+            0,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2537\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Did you perceive any degree of commercial bias in this program?",
+            "textfield",
+            "5",
+            null,
+            null,
+            60,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2840\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Did you perceive any degree of commercial bias in this program?",
+            "radios",
+            "2",
+            "Yes No",
+            null,
+            60,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/3014\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Did you perceive any degree of commercial bias in this program?",
+            "radios + textfield",
+            "2",
+            "Yes No",
+            null,
+            0,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2538\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Differenciate SEBs from a manufacturing and a regulatory perspective",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            2,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2684\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Differentiate once-weekly and once-daily GLP-1R agonists in terms of efficacy, safety and devices",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2539\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Differentiate the cardiovascular effects of older and newer antihyperglycemic agents as well as the associated cardiovascular events and the implications for practice.",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            2,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2685\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Differentiate the pharmacological therapies available for osteoporosis",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2686\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Differentiate the various insulins including those that are newly available in Canada (AFTER)",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2687\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Differentiate the various insulins including those that are newly available in Canada (BEFORE)",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2688\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Disclosure of potential conflicts of interest was clearly communicated",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2540\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Disclosures Clearly Identified",
+            "radios",
+            "4",
+            "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+            null,
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2689\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Discuss and address psoriasis treatment challenges in special patient populations, including: ? Patients with infectious diseases such as HIV or hepatitis ? Patients with or at risk of TB infection ? Patients with chronic periodontitis",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2541\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Discuss and determine the fit, in whole or in part, with our current group diabetes educational offerings",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/3035\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Discuss distintive features of osteoporosis core in Chronic Kidney Disease",
+            "radios",
+            "5",
+            "12345678910",
+            null,
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2542\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Discuss distintive features of osteoporosis core in Elderly Patients",
+            "radios",
+            "5",
+            "12345678910",
+            null,
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2543\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Discuss distintive features of osteoporosis core in GIOP",
+            "radios",
+            "5",
+            "12345678910",
+            null,
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2544\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Discuss distintive features of osteoporosis core in Men",
+            "radios",
+            "5",
+            "12345678910",
+            null,
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2545\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Discuss distintive features of osteoporosis core in Type II Diabetes",
+            "radios",
+            "5",
+            "12345678910",
+            null,
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2546\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Discuss evidence behind nutrition recommendations and how the current food landscape is changing renal diet recommendations",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2690\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Discuss how ICU care can mask pituitary insufficiency.",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/3037\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Discuss management strategies for metastases, and disease-\/treatment related toxicity",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2691\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Discuss new and emerging aspects of the immuno-pathogenesis of psoriasis and their implications for management with targeted therapies",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2692\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Discuss strategies to achieve better glycemic control in hospital",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2547\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Discuss the advancements in the understanding and treatment of endocrine disorders over a career.",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2693\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Discuss the appropriate use of biologic therapy in pregnant and\/or lactating patients with psoriasis",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2548\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Discuss the clinical application of the GeNeSIS results",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/3041\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Discuss the need for concentrated insulins",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2694\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Discuss the potential for combining GLP-1R agonists with various antihyperglycemic agents, including SGLT2 inhibitors and insulin",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2549\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Discuss the prevalence of iodine deficiency in  Canada",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/3043\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Discuss the rationale behind the diabetes CV safety outcome trials (CVOT)",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            2,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2695\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Discuss the rationale for the development of new insulins",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            2,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2696\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Discuss the relationship between diabetes, micro and macrovascular outcomes and the importance of glycemic control.",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            2,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2697\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Discuss the role of reverse T3 in thyroid treatment",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/3044\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Discuss the use of desiccated thyroid in the treatment of hypothyroidism",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/3045\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Discuter des cibles th?rapeutiques et des traitements tant avec les professionnels de la sant? traitant et le patient",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2698\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Discuter des facteurs pouvant amener des fluctuations glyc?miques et influencer  l?absorption de l?insuline",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2699\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Discuter des strat?gies de prise en charge des m?tastases et de la toxicit? li?e ? la maladie ou au traitement",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2700\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Distinguer les diff?rentes options pharmacologiques selon le profil clinique des patients",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2701\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Distinguer les diff?rents traitements dans le diab?te",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2702\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Distinguer les divers types d?insulines: d?buts, pics et dur?es d?action",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2703\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Distinguer les options th?rapeutiques parmi l\u0027insulinoth?rapie",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2704\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Documentation",
+            "radios",
+            "4",
+            "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+            null,
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2550\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Emphasize the importance of starting palliative care early to improve quality of life",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2705\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Encourager la client?le diab?tique dans l?autogestion du diab?te",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2706\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Engage in interdisciplinary collaboration to implement a local plan to improve in-hospital management of hyperglycemia and diabetes",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2551\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Enseigner les techniques d?injections de l?insuline",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2707\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Enter speaker generated fair balanced non promotional with no product mention learning objective #1 here. Should be based on an expressed learning need of intended audience",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2552\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Enter speaker generated fair balanced non promotional with no product mention learning objective #2 here. Should be based on an expressed learning need of intended audience",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2553\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Enter speaker generated fair balanced non promotional with no product mention learning objective #3 here. Should be based on an expressed learning need of intended audience",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2554\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Evaluate clinical data of different agents with varying mechanisms of action and quantify the opportunity for higher levels of clearance of plaque psoriasis",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2555\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Evaluate current cytotoxic chemotherapy and targeted therapeutic options for your Advanced or Metastatic GEJ and Gastric patients",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2556\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Evaluate factors influencing treatment decisions in T2DM between the new and old antihyperglycemic agents",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2557\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Evaluate the evidence supporting current cytotoxic chemotherapy and targeted therapeutic options for advanced Gastro-esophageal Junction (GEJ) and Gastric Cancer (GC) patients.",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2709\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Evaluate ways to optimize the insulin regimen of a patient currently on mealtime insulin therapy (AFTER)",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2710\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Evaluate ways to optimize the insulin regimen of a patient currently on mealtime insulin therapy (BEFORE)",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2711\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Examine the rationale and benefits of glycemic management",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2558\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Examiner les d?lais\/m?thodes de pr?l?vement de tissus et les incidences sur le traitment",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2712\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Explain  the PK\/PD profile of  concentrated  insulins  and distinguish  between  bioequivalent   and  nonbioequivalent concentrated insulins",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2713\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Explain bone turnover markers and advanced bone imaging techniques and the value they provide in understanding osteoporosis and its therapies",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2559\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Explain how orthopaedic surgeons and fracture liaison services can play a key role in preventing future fragility fractures",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2714\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Explain how reshaping the physician-patient dialogue can empower patients to participate in their care and set targets for themselves",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            2,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2715\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Explain the Conversations Map? approach",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/3033\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Explain the differences between Subsequent Entry Biologic (SEB) and reference products",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            2,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2716\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Explain the importance of treating hyperglycemia to reach identified target",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2560\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Explain the mechanism of action of sodium-glucose co-transporter 2 (SGLT2) inhibitors in glucose reduction, side effects, and monitoring.",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2717\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Explain the mechanism of SGLT2 inhibitors",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2718\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Explain the PK\/PD profile of concentrated insulins",
+            "radios",
+            "5",
+            "12345678910",
+            null,
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2719\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Explain the rationale for the development of systemic treatment options targeted at IL-17",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2720\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Expliquer comment les marqueurs du renouvellement osseux et les techniques avanc?es d\u0027imagerie osseuse sont utiles ? la compr?hension de l\u0027ost?oporose et de ces traitements",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2561\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Explore the impact of nutrition on survival and quality of life in metastatic gastric cancer through case studies.",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2721\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Explore the interaction between tertiary centres and secondary\/community diabetes centres to discuss how to improve communication and set up a satellite clinic.",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2722\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Faculty members were effective in delivering\/facilitating the program",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2562\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Faire ressortir l\u0027importances d\u0027instaurer rapidement les soins palliatifs pour am?liorer la qualit? de vie",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2723\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Fonctionnalit? des locaux",
+            "radios",
+            "4",
+            "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+            null,
+            0,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2724\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Fonctionnalite? des locaux",
+            "radios",
+            "4",
+            "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+            null,
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2725\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "For program participants in Quebec: Did this program meet the Code of Ethics of the Quebec CME accrediting bodies?",
+            "radios + textfield",
+            "2",
+            "Yes No",
+            null,
+            0,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2563\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "For program participants in Quebec: Did this program meet the Code of Ethics of the Quebec CME accrediting bodies?",
+            "textfield",
+            "5",
+            null,
+            null,
+            23,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2841\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "For program participants in Quebec: Did this program meet the Code of Ethics of the Quebec CME accrediting bodies?",
+            "radios",
+            "2",
+            "Yes No",
+            null,
+            23,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/3015\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Functionality of the Location",
+            "radios",
+            "4",
+            "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+            null,
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2726\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Future program ideas\/learning needs:",
+            "textfield",
+            "5",
+            "12345678910",
+            null,
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2727\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "General Organization",
+            "radios",
+            "4",
+            "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+            null,
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2728\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Generating intellectually stimulating discussions",
+            "radios",
+            "5",
+            "12345678910",
+            null,
+            2,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2729\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "How did your experience attending this program compare to other industry supported program you have attended?",
+            "radios",
+            "5",
+            "12345678910",
+            null,
+            4,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2564\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "How effective was the speaker?",
+            "textfield",
+            "5",
+            null,
+            null,
+            59,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2843\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "How effective was the speaker?",
+            "radios + textfield",
+            "5",
+            "12345678910",
+            null,
+            0,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2730\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "How effective was the speaker?",
+            "radios",
+            "5",
+            "12345678910",
+            null,
+            59,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/3006\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "How likely are you to recommend this program to a colleague?",
+            "radios",
+            "5",
+            "12345678910",
+            null,
+            61,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2731\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "How likely is it that you will make a change to your clinical practice based on what you learned in this program?",
+            "textfield",
+            "5",
+            null,
+            null,
+            49,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2844\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "How likely is it that you will make a change to your clinical practice based on what you learned in this program?",
+            "radios + textfield",
+            "5",
+            "12345678910",
+            null,
+            0,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2732\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "How likely is it that you will make a change to your clinical practice based on what you learned in this program?",
+            "radios",
+            "5",
+            "12345678910",
+            null,
+            49,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/3011\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "How will you use this curriculum in your country and in what setting?",
+            "textfield",
+            "5",
+            "12345678910",
+            null,
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2733\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "How would you rate the overall quality of the Educational program?",
+            "checkbox",
+            "2",
+            null,
+            null,
+            0,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2837\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "How would you rate the overall quality of the Educational program?",
+            "radios",
+            "5",
+            "12345678910",
+            null,
+            68,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2734\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "How would you rate the overall quality of the Educational program?",
+            "radios + checkbox",
+            "5",
+            "12345678910",
+            null,
+            0,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/3022\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "How would you rate the overall quality of the RA Medical Education Curriculum?",
+            "radios",
+            "5",
+            "12345678910",
+            null,
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2735\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "How would you rate the overall quality of the workshops?",
+            "radios",
+            "5",
+            "12345678910",
+            null,
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2736\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "How would you rate your level of confidence in improving your collaboration with the interprofessional members of the care team involved in the management of your patients with T2D on mealtime insulin as a result of this program?",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2737\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "I am able to identify and assess patients with nonspecific back pain using the CORE history and physical examination tool",
+            "radios",
+            "5",
+            "12345678910",
+            null,
+            0,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2738\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "I am confident in identifying the COPD patient where I would use inhaled corticosteroids(ICS).",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            0,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2565\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "I am confident of where the new LABA\/LAMA fixed dose combinations fit in the treatment of COPD",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            0,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2566\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "I am familiar with the clinical features of IPF",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            0,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2567\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "I am more willing to proactively identify symptomatic asthma patients in my practice in order to optimize their treatment",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            0,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2568\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "I can help educate and motivate patients to self manage their chronic low back pain",
+            "radios",
+            "5",
+            "12345678910",
+            null,
+            0,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2569\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "I can individualize best practice non-pharmacological and pharmacologic treatment options",
+            "radios",
+            "5",
+            "12345678910",
+            null,
+            0,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2739\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "I feel confident in proactively managing the side effects of IPF treatment to improve adherence",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            0,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2570\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "I feel more confident in how to step-down appropriate COPD patients from triple therapy to LABA\/LAMA therapy.",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            0,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2571\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "I have a greater awareness of the number of symptomatic asthma patients in my practice",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            0,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2572\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "I have an increased awareness of the approved treatment options for IPF",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            0,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2573\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "I have an increased awareness of the need to diagnose and treat IPF earlier",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            0,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2574\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "I have greater confidence in using a LAMA as add on to ICS\/LABA for asthma patients who are symptomatic",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            0,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2575\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "I learned new information during this presentation (Genetic screening of patients with congenital GHD)",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2740\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "I learned new information during this presentation (Imaging in patients with congenital hypopituitarism)",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2741\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "I learned new information during this presentation (Imprinting disorders and impact on growth)",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2742\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "I trust Lilly will leverage my contributions",
+            "radios",
+            "5",
+            "12345678910",
+            null,
+            2,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2743\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "I will be able to use what I learned in this program",
+            "radios",
+            "5",
+            "12345678910",
+            null,
+            6,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2744\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Identifier par des ?tudes de cas r?els, l?impact de ces mesures en milieu communautaire.",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2745\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Identify and address potential barriers when advancing to injectable therapy in patients with type 2 diabetes",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2576\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Identify and address unique issue surrounding the management of glycemia in Distinct Populations",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            2,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2577\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Identify characteristics unique to elderly patients with diabetes",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2578\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Identify patient profiles that require individualization of antihyperglycemic therapy",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2579\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Identify patients that would benefit from SGLT2 inhibitor therapy and assess need for adjustments to concurrent medications.",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2746\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Identify selection criteria for appropriate candidates for self-titration of mealtime insulin titration",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2580\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Identify situations where drug holidays are appropriate and the situations where they are not",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2581\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Identify strategies to address common challenges for patients with T2D on insulin (AFTER)",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2747\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Identify strategies to address common challenges for patients with T2D on insulin (BEFORE)",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2748\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Identify strategies to facilitate a successful transition to adult care with optimal diabetes management",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2582\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Identify the clinical implications surrounding the arrival of Subsequent Entry Biologic insulins",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            0,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2749\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Identify the clinical implications surrounding the arrival SEB insulins",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            2,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2750\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Identify the key results of the GeNeSIS study from an international and Canadian perspective.",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/3040\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "If you answered more than one month, please explain why:",
+            "textfield",
+            "5",
+            null,
+            null,
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/3032\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Implement strategies for optimizing the treatment of patients with psoriasis on biologic therapy, including dose escalation combination therapy and treatment switches",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2583\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Initiate and titrate a meal-time insulin regimen",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2584\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Int?grer la loi 41 dans le quotidien du suivi du patient diab?tique",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2751\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Integrate SGLT2 inhibitors into your type 2 diabetes practice with the aid of practical patient care videos",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2585\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Interaction",
+            "radios",
+            "4",
+            "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+            null,
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2586\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Interactivity",
+            "radios",
+            "4",
+            "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+            null,
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2752\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Interpr?ter les informations concernant les carnets de glyc?mie et autres donn?es de laboratoire pertinentes",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2753\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Interpret current literature on expected benefits and potential harms of OP medication",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2587\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Introduce new insulins available in Canada in terms of efficacy, safety and devices",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2754\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Involve the patient in treatment decisions",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2588\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "JAK Inhibition and Clinical Implications Slide Deck",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2755\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Lilly is a company with whom I prefer to work",
+            "radios",
+            "5",
+            "12345678910",
+            null,
+            2,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2756\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "List 5 therapeutic strategies for the acute management of refractory life-threatening",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/3038\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "List any ways you will change your treatment of COPD patients as a result of attending this program",
+            "textfield",
+            "5",
+            null,
+            null,
+            0,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2757\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "List factors important to the interpretation of DXA scans",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2589\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "List the current recommendations, benefits and potential safety concerns with calcium and vitamin D supplementation",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2590\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "List the reasons why glycemia targets may not be met",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2591\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Manage challenging breast cancer cases and integrate evidence in clinical practice",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2758\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Manage the adverse effects of SGLT2 inhibitors and their implication s when utilizing this class of antihyperglycemic agent",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2592\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Met the Program Objectives",
+            "radios",
+            "4",
+            "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+            null,
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2759\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Organisation generale",
+            "radios",
+            "4",
+            "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+            null,
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2760\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Outline the process for the development of therapeutic monoclonal antibodies",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2761\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Pertinence du contenu",
+            "radios",
+            "4",
+            "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+            null,
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2593\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Please indicate which CanMEDS FM roles you felt were addressed during this educational activity.",
+            "multiselect",
+            "7",
+            "CanMEDS FM roles",
+            null,
+            6,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2594\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Please provide any feedback you have regarding the speaker(expertise, presentation style, clarity...)",
+            "textfield",
+            "5",
+            null,
+            null,
+            0,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2762\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Please provide any suggested topics for future educational programs.",
+            "textfield",
+            "5",
+            "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+            null,
+            3,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2763\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Please rate the Interest level of \u0022Hypoglycemia in Diabetes: Incidence Poor Fair Good Very Good and clinical implications - what is the data telling us\u0022",
+            "radios",
+            "5",
+            "12345678910",
+            null,
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2764\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Please rate the interest level of \u0022Options and future opportunities to improve the management of the hypoglycemic burden and associated fear\u0022",
+            "radios",
+            "5",
+            "12345678910",
+            null,
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2765\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Please rate the interest level of the \u0022CHRYSTAL study - Implications of hypoglycemia on quality of Life\u0022",
+            "radios",
+            "5",
+            "12345678910",
+            null,
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2766\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Please rate the quality of \u0022CHRYSTAL study - Implications of hypoglycemia on quality of Life\u0022",
+            "radios",
+            "5",
+            "12345678910",
+            null,
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2767\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Please rate the quality of \u0022Hypoglycemia in Diabetes: Incidence Poor Fair Good Very Good and clinical implications - what is the data\u0022",
+            "radios",
+            "5",
+            "12345678910",
+            null,
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2768\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Please rate the quality of \u0022Options and future opportunities to improve the management of the hypoglycemic burden and associated fear\u0022",
+            "radios",
+            "5",
+            "12345678910",
+            null,
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2769\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Please share a decision you have made about your practice and\/or work as result of attending this program",
+            "textfield",
+            "5",
+            null,
+            null,
+            0,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2770\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Please share any comments related to identification of disclosures, relevance of content to practice, or any other aspect of the program",
+            "textfield",
+            "5",
+            null,
+            null,
+            40,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2595\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Please share any remaining learning needs and\/or unanswered clinical questions you have:",
+            "textfield",
+            "5",
+            null,
+            null,
+            52,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2596\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Please share any remaining topics you would like covered in future symposia",
+            "textfield",
+            "5",
+            "12345678910",
+            null,
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/3042\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "please share why you rated the overall quality of the program as you did in the question above",
+            "textfield",
+            "5",
+            "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+            null,
+            7,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2771\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Please share why you rated the overall quality of the program as you did.",
+            "textfield",
+            "5",
+            "12345678910",
+            null,
+            3,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2772\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Please share your thoughts on the quality of the discussions and solutions identified during the workshops.",
+            "textfield",
+            "5",
+            "12345678910",
+            null,
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2773\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Pr?ciser la cible glyc?mique selon les charact?ristiques d\u0027un patient",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2774\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Pr?sence de biais commercial",
+            "textfield",
+            "5",
+            null,
+            null,
+            0,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2845\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Pr?sence de biais commercial",
+            "radios",
+            "2",
+            "Yes No",
+            null,
+            0,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/3016\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Pr?sence de biais commercial",
+            "radios + textfield",
+            "2",
+            "Yes No",
+            null,
+            0,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2775\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Pr?venir les ?pisodes d?hypoglyc?mies en milieu de courte dur?e, CHSLD, SAD, centre d?h?bergement; 4. Appliquer la correction lors d?hypoglyc?mies; 5. Conna?tre les nouvelles pratiques relatives ? la technique d?injection d?insuline.",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2776\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Pre?sence de biais commercial",
+            "radios",
+            "2",
+            "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+            null,
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2598\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Prescribe appropriate medications to achieve glycemic target and minimize side effects while applying the new 2013 CDA guidelines",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2597\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Program Materials",
+            "radios",
+            "4",
+            "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+            null,
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2777\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Provide an overview of the measures important in understanding concentrated insulins (bioequivalence, PK\/PD profiles)",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2778\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Provide two SPECIFIC changes you will make in your practice as a result of this program",
+            "textfield",
+            "5",
+            null,
+            null,
+            9,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2599\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Qualit? de l\u0027audiovisuel",
+            "radios",
+            "4",
+            "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+            null,
+            0,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2779\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Qualite? de l\u0027audiovisuel",
+            "radios",
+            "4",
+            "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+            null,
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2780\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Quelle a ?t? votre impression du conf?rencier?",
+            "textfield",
+            "5",
+            null,
+            null,
+            0,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2846\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Quelle a ?t? votre impression du conf?rencier?",
+            "radios",
+            "5",
+            "12345678910",
+            null,
+            0,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/3017\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Quelle a ?t? votre impression du conf?rencier?",
+            "radios + textfield",
+            "5",
+            "12345678910",
+            null,
+            0,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2781\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Quelle est la probabilit? que vous modifiez vos pratiques cliniques en raison des connaissances acquises lors de ce programme?",
+            "textfield",
+            "5",
+            null,
+            null,
+            0,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2847\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Quelle est la probabilit? que vous modifiez vos pratiques cliniques en raison des connaissances acquises lors de ce programme?",
+            "radios",
+            "5",
+            "12345678910",
+            null,
+            0,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/3018\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Quelle est la probabilit? que vous modifiez vos pratiques cliniques en raison des connaissances acquises lors de ce programme?",
+            "radios + textfield",
+            "5",
+            "12345678910",
+            null,
+            0,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2782\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "R?viser le concept de l\u0027ost?oporose chez l\u0027homme",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2614\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "R?viser les donn?es ?pid?miologiques D?finir la fracture et son diagnostique clinique Discuter des cons?quences d\u0027une fracture Voir le r?le du radiologiste dans la prise en charge de",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2615\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "RA Management: Rheum for Improvement? Slide Deck",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2783\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Recognize challenges to overall diabetes management in these populations",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            2,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2600\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Recognize clinical situations for combining GLP-1R agonists with various antihyperglycemic agents, including insulin",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2784\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Recognize clinical situations where a GLP-1R agonist could be the preferred choice of antihyperglycemic therapy for patients with type 2 diabetes",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2601\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Recognize clinical situations where premixed insulin could be the preferred choice of insulin therapy for patients with type 2 diabetes",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2602\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Recognize opportunities for continuous self-reflection and collaboration with the healthcare professional team co-managing patients on insulin therapy (AFTER)",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2785\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Recognize opportunities for continuous self-reflection and collaboration with the healthcare professional team co-managing patients on insulin therapy (BEFORE)",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2786\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Recognize that the first fragility fracture increases the risk of subsequent fractures",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2787\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Recognize the challenges associated with transition of care in young adults with type 1 diabetes",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2603\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Recognize the clinical situation where addition of meal-time (bolus) insulin would be beneficial",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2604\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Recognize the clinical situation where basal insulin is insufficient for glucose control",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2605\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Recognize the evidence behind starting insulin strategies in type 2 diabetes",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2788\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Recognize the importance of individualized care in T2DM",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2606\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Recognize the rationale for achieving better glycemic control in hospital",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2607\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Recognize timeframe\/method for tissue sampling and its impact on treatment",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2789\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Recognize, assess and manage events of special interest in patients on psoriasis therapies, including Inflammatory bowel disease (IBD), candidiasis, and depression\/suicidality",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2608\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Reconna?tre les situations cliniques et les mesures applicables quand un changement de traitement est requis dans la prise en charge de l\u0027ost?oporose (?chec du traitement, cong? th?rapeutique)",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2609\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Relevance of Content",
+            "radios",
+            "4",
+            "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+            null,
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2790\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Review and discuss key considerations and recommendations regarding screening, initiating and monitoring psoriasis therapy to optimize patient outcomes",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2610\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Review and evaluate the clinical data related to anti IL-17s in the management of the patient with psoriasis",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2791\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Review data from concentrated insulins currently available in Canada to provide a rationale for their clinical utility in appropriate patient types",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2792\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Review the cellular and molecular aspects of the pathogenesis of psoriasis and their implications for management",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2611\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Review the goals for treatment",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2612\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Review the safe use of insulin in elderly patients",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2613\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "S?lectionner l\u0027option th?rapeutique dans l\u0027intensification d l\u0027insulinoth?rapie selon une situation clinique",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2793\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Select appropriate oral agents for elderly patients",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2616\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Share highlights from San Antonio and it\u0027s clinical application",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2794\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Summarize the burden of osteoporosis with respect to post-fracture morbidity and mortality.",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2795\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Summarize the epidemiology and disease state of Gastro-esophageal Junction (GEJ) and Gastric Cancer (GC) in Canada and worldwide",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2617\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Talk-to-Target: How to Get the Most from a nme-Constrained Office Visit",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2796\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "The credibility of the information",
+            "radios",
+            "5",
+            "12345678910",
+            null,
+            2,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2797\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "The discussion was conducted in a transparent manner",
+            "radios",
+            "5",
+            "12345678910",
+            null,
+            2,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2798\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "The facilitator\u0027s ability to ensure all views were given appropriate attention",
+            "radios",
+            "5",
+            "12345678910",
+            null,
+            2,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2799\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "The information I learned will be used in my future practice",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2618\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "The interactivity of this programme format kept me engaged and enhanced my overall learning experience",
+            "radios",
+            "5",
+            "12345678910",
+            null,
+            2,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2800\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "The presentations were clear and easy to understand",
+            "radios",
+            "5",
+            "12345678910",
+            null,
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2801\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "The program achieved the intended stated learning objectives",
+            "radios",
+            "5",
+            "12345678910",
+            null,
+            4,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2802\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "The program content was relevant to family medicine",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2619\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "The program met my expectations",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2803\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "The program was non-biased",
+            "radios",
+            "5",
+            "12345678910",
+            null,
+            0,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2804\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "The program was well organized",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2805\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "The programme allowed me to interact and exchange with my colleagues",
+            "radios",
+            "5",
+            "12345678910",
+            null,
+            3,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2806\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "The programme format was appropriate",
+            "radios",
+            "5",
+            "12345678910",
+            null,
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2807\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "The relevance of the pre-read materials to the discussion topic",
+            "radios",
+            "5",
+            "12345678910",
+            null,
+            2,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2808\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "The scientific content of this program was fair and balanced",
+            "radios",
+            "5",
+            "12345678910",
+            null,
+            5,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2809\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "The scientific content was relevant to my needs and daily practice",
+            "radios",
+            "5",
+            "12345678910",
+            null,
+            8,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2810\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "The speakers were knowledgeable and experienced",
+            "radios",
+            "5",
+            "12345678910",
+            null,
+            4,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2811\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "The time allowed for collaboration with my peers",
+            "radios",
+            "5",
+            "12345678910",
+            null,
+            3,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2812\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "There was adequate time discussion",
+            "radios",
+            "5",
+            "12345678910",
+            null,
+            0,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2813\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "This is my first experience.",
+            "checkbox",
+            "5",
+            "Yes No",
+            null,
+            0,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2814\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "This presentation (Genetic screening of patients with congenital GHD) was useful and relevant for my clinical practice",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2815\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "This presentation (Imaging in patients with congenital hypopituitarism) was useful and relevant for my clinical practice",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2816\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "This presentation (Imprinting disorders and impact on growth) was useful and relevant for my clinical practice.",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2817\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "This program content enhanced my knowledge",
+            "radios",
+            "5",
+            "12345678910",
+            null,
+            6,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2818\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "This program was an effective use of my time",
+            "radios",
+            "5",
+            "12345678910",
+            null,
+            8,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2819\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Through case discussion, gain a better understanding of managing diabetes in the community pediatric setting.",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2820\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "To discuss the work-up and management of calcium disorders",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2821\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "To review normal calcium homeostasis and metabolism",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2822\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "To review the management of hypercalcaemia within the context of three intriguing cases.",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2823\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Topics you would like to see addressed in the future",
+            "textfield",
+            "5",
+            null,
+            null,
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2824\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Trouver des strat?gies pour pr?venir l\u0027hyperglyc?mie caus?e par l\u0027exercice",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            2,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2620\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Trouver des strat?gies pour pr?venir l\u0027hyperglyc?mie caus?e par l\u0027exercice.",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            0,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2825\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Trouver des strat?gies pour pr?venir l\u0027hypoglyc?mie caus?e par l\u0027exercice",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            2,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2621\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Trouver des strat?gies pour pr?venir l\u0027hypoglyc?mie caus?e par l\u0027exercice.",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            0,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2826\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Understand the role and limitations of 10-year Identify situations where drug holidays are fracture risk assessment tools (FRAX\/CAROC)",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2622\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Utiliser des strat?gies et des outils de stratification du risque pour ?valuer comment traiter les patients soufrant d\u0027ost?oporose",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2623\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Utilize strategies and resources to address challenges in these populations",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            2,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2624\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Visualizing the Problem: Imaging in RA",
+            "radios",
+            "5",
+            "12345678910",
+            "Learning Objective",
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2827\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "What could we have done to make this experience better for you?",
+            "textfield",
+            "5",
+            null,
+            null,
+            43,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2625\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "What did we do to make this a positive experience for you?",
+            "textfield",
+            "5",
+            null,
+            null,
+            44,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2626\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "What did we do to make this a positive experience for you? What could we have done to make this experience better for you?",
+            "textfield",
+            "5",
+            "12345678910",
+            null,
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2828\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "What do you like the most about the RA Medical Education Curriculum and why?",
+            "textfield",
+            "5",
+            "12345678910",
+            null,
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2829\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "What is your Country of Residence?",
+            "selectkey",
+            "5",
+            "What is your country of residence?",
+            null,
+            7,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2627\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "What is your specialty?",
+            "selectkey",
+            "5",
+            "What is your specialty?",
+            null,
+            15,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2628\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "What recommendations do you have to improve the learning experience in order to better meet your needs and provide value to you and your practice?",
+            "textfield",
+            "5",
+            "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+            null,
+            4,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2830\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "What recommendations do you have to specifically enhance future medical education Lilly Advisory Boards?",
+            "textfield",
+            "5",
+            "12345678910",
+            null,
+            3,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2831\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "What recommendations do you have to specifically enhance the experience in order to better meet your needs and provide value to you and your practice?",
+            "textfield",
+            "5",
+            "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+            null,
+            3,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2832\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "When do you plan to integrate the Conversation Map? tools into your education sessions?",
+            "selectkey",
+            "5",
+            "When do you plan to integrate the Conversation Map? tools into your education sessions",
+            null,
+            2,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2629\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Which element(s) present the biggest challenges in treating patients with Type 2 Diabetes? Please explain",
+            "textfield",
+            "5",
+            null,
+            null,
+            2,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2630\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Which initiative are you most excited about and why?",
+            "textfield",
+            "5",
+            "12345678910",
+            null,
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2833\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Why would you recommend this program to your colleagues?",
+            "textfield",
+            "5",
+            "12345678910",
+            null,
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2834\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Would you recommend this program to your colleagues?",
+            "radios",
+            "2",
+            "Yes No",
+            null,
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2835\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Y-a-t-il eu divulgation de conflicts d\u0027int?r?st potentials?",
+            "radios + textfield",
+            "2",
+            "Yes No",
+            null,
+            0,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/2836\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Y-a-t-il eu divulgation de conflicts d\u0027int?r?st potentials?",
+            "radios",
+            "2",
+            "Yes No",
+            null,
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/3019\u0022\u003EEdit\u003C\/a\u003E"
+          ],
+          [
+            "Y-a-t-il eu divulgation de conflicts d\u0027int?r?st potentials?",
+            "textfield",
+            "5",
+            null,
+            null,
+            1,
+            "\u003Ca href=\u0022\/mildder8\/manageinfo\/term-edit\/form\/3020\u0022\u003EEdit\u003C\/a\u003E"
+          ]
+        ]
+      }
+    }
+  ]
+}

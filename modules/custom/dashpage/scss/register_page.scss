@@ -1,0 +1,76 @@
+@import "mixins";
+@import "colors";
+
+$imageBasepath : "../images/";
+$baseHeight: 100%;
+
+
+html {
+  height: 100% !important;
+  overflow: hidden;
+  body {
+    footer {
+      display: none;
+    }
+    .navbar.navbar-default {
+      overflow: hidden;
+      display:none;
+    }
+    .container {
+      width: 100%;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
+        .row {
+          height: 100%;
+          margin:  0;
+          overflow: hidden;
+          section {
+            @extend .row;
+            .region-content {
+              @extend .row;
+            }
+          }
+        }
+    }
+  }
+}
+
+#MildderInfoRegister {
+  width: 100%;
+  height: $baseHeight;
+  padding: 10px 0;
+  text-align: center;
+  color: #fff;
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(#{$imageBasepath}intro_bg.jpg) no-repeat center center fixed;
+  background-color: $black;
+  background-attachment: fixed;
+  @include background-size("cover");
+}
+.btn-default {
+  color: #fff;
+  border: 0;
+  border-radius: 0px;
+  padding: 8px 24px;
+  margin: 0 8px 30px 0px;
+  font-size: 1.0em;
+  font-weight: 600;
+  text-transform: uppercase;
+  width: auto;
+  height: auto;
+  min-width: 100px;
+  line-height: 2.142;
+  transition:font-size .2s ease-in-out;
+}
+.btn-submit {
+  @extend .btn-default;
+  background-color: $blue;
+
+  @include hover-state {
+    background-color: $pink;
+  }
+}
+
+
+
+

@@ -1,0 +1,43 @@
+# json for snapshot
+dashpage.standard.json:
+  path: '/dashpage/{section}/json/{entity_id}/{start}/{end}'
+  defaults:
+    _controller: '\Drupal\dashpage\Controller\DashpageController::standardJson'
+    _title: 'Snapshot Page'
+  requirements:
+    _permission: 'access content'
+
+# snapshot
+dashpage.standard.snapshot:
+  path: '/dashpage/{section}/snapshot/{entity_id}/{start}/{end}'
+  defaults:
+    _controller: '\Drupal\dashpage\Controller\DashpageController::standardSnapshot'
+    _title: 'Snapshot Page'
+  requirements:
+    _permission: 'access content'
+
+dashpage.standard.menu.item:
+  path: '/dashpage/{section}/snapshot/{entity_id}'
+  defaults:
+    _controller: '\Drupal\dashpage\Controller\DashpageController::standardMenuItem'
+    _title: 'Snapshot Page'
+  requirements:
+    _permission: 'access content'
+
+# snapshot
+dashpage.guide.page:
+  path: '/home/guide/page'
+  defaults:
+    _controller: '\Drupal\dashpage\Controller\DashpageController::guidePage'
+    _title: 'Guide Page'
+  requirements:
+    _permission: 'access content'
+
+# user register
+dashpage.user.register:
+  path: '/home/user/register'
+  defaults:
+    _controller: '\Drupal\dashpage\Controller\DashpageController::userRegister'
+    _title: 'User Register'
+  requirements:
+    _permission: 'access content'
