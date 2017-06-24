@@ -391,87 +391,19 @@ class TerminfoJsonController extends ControllerBase {
         );
         break;
 
-      case 'module':
+      case 'item':
         $output = array(
           array(
-            'field_label' => 'Programs',
-            'field_name'  => 'custom_formula_function',
-            'formula_function' => 'programNamesByModule',
-          ),
-        );
-        break;
-
-      case 'program':
-        $output = array(
-          array(
-            'field_label' => 'Name',
-            'field_name'  => 'custom_formula_function',
-            'formula_function' => 'linkForProgram',
+            'field_label' => 'ABB',
+            'field_name'  => 'field_item_abbrevname',
           ),
           array(
-            'field_label' => 'Business Unit',
-            'field_name'  => 'field_program_businessunit',
+            'field_label' => 'Range',
+            'field_name'  => 'field_item_rangemin',
           ),
           array(
-            'field_label' => 'Area',
-            'field_name'  => 'field_program_theraparea',
-          ),
-          array(
-            'field_label' => 'Class',
-            'field_name'  => 'field_program_programclass',
-          ),
-          array(
-            'field_label' => 'Events',
-            'field_name'  => 'custom_formula_function',
-            'formula_function' => 'linkForCountMeetingByProgram',
-          ),
-          array(
-            'field_label' => 'Add',
-            'field_name'  => 'custom_formula_function',
-            'formula_function' => 'linkForAddMeetingByProgram',
-          ),
-          // array(
-          //   'field_label' => 'Division',
-          //   'field_name'  => 'field_program_division',
-          // ),
-          // array(
-          //   'field_label' => 'Region',
-          //   'field_name'  => 'field_program_region',
-          // ),
-        );
-        break;
-
-      case 'province':
-        $output = array(
-          array(
-            'field_label' => 'Region',
-            'field_name'  => 'field_province_region',
-          ),
-        );
-        break;
-
-      case 'questionlibrary':
-        $output = array(
-          array(
-            'field_label' => 'Type',
-            'field_name'  => 'field_queslibr_fieldtype',
-          ),
-          array(
-            'field_label' => 'Scale',
-            'field_name'  => 'field_queslibr_scale',
-          ),
-          array(
-            'field_label' => 'Label',
-            'field_name'  => 'field_queslibr_label',
-          ),
-          array(
-            'field_label' => 'Question Type',
-            'field_name'  => 'field_queslibr_questiontype',
-          ),
-          array(
-            'field_label' => 'Reference',
-            'field_name'  => 'custom_formula_function',
-            'formula_function' => 'linkForCountEvaluationFormByQuestion',
+            'field_label' => 'Range',
+            'field_name'  => 'field_item_rangemax',
           ),
         );
         break;
