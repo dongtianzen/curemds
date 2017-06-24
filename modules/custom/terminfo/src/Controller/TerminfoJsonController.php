@@ -398,11 +398,11 @@ class TerminfoJsonController extends ControllerBase {
             'field_name'  => 'field_item_abbrevname',
           ),
           array(
-            'field_label' => 'Range',
+            'field_label' => 'Min',
             'field_name'  => 'field_item_rangemin',
           ),
           array(
-            'field_label' => 'Range',
+            'field_label' => 'Max',
             'field_name'  => 'field_item_rangemax',
           ),
         );
