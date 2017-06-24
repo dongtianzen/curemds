@@ -405,6 +405,10 @@ class TerminfoJsonController extends ControllerBase {
             'field_label' => 'Max',
             'field_name'  => 'field_item_rangemax',
           ),
+          array(
+            'field_label' => 'range',
+            'field_name'  => 'field_item_minirange',
+          ),
         );
         break;
 
