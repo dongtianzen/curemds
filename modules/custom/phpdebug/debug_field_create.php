@@ -40,12 +40,30 @@
     text_long      // Text (formatted, long)
     text_with_summary
    */
+
+  /**
+   *
+   $fields[] = array(
+     'field_name' => 'field_record_baso_pct',
+     'type'       => 'string',
+     'label'      => t('嗜碱性粒细胞百分数'),
+   );
+   */
   function _entity_fields_info() {
-    $fields[] = array(
-      'field_name' => 'field_record_baso_pct',
-      'type'       => 'string',
-      'label'      => t('嗜碱性粒细胞百分数'),
-    );
+    $fields_names = $this->_entity_fields_names();
+    foreach ($fields_names as $row) {
+      $row_name = strtolower($row[1]);
+
+      if ($row_name, '%') !== false) {
+        $row_name = str_replace('%', '_pct' . $row_name)
+      }
+
+      $fields[] = array(
+        'field_name' => 'field_record_' . $row_name,
+        'type'       => 'string',
+        'label'      => $row[0],
+      );
+    }
     return $fields;
   }
 
