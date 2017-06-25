@@ -15,7 +15,7 @@
 
     $fields = _entity_fields_info();
     foreach ($fields as $field) {
-      _entity_create_fields_save($entity_info, $field);
+      // _entity_create_fields_save($entity_info, $field);
     }
   }
 

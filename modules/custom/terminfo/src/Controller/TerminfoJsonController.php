@@ -105,8 +105,6 @@ class TerminfoJsonController extends ControllerBase {
    */
   public function basicCollectionNids($entity_bundle = NULL, $start = NULL, $end = NULL) {
     $nids = \Drupal::getContainer()->get('flexinfo.querynode.service')->nidsByBundle($entity_bundle);
-dpm($entity_bundle);
-dpm($nids);
 
     $start_boolean = \Drupal::getContainer()->get('flexinfo.setting.service')->isTimestamp($start);
     $end_boolean = \Drupal::getContainer()->get('flexinfo.setting.service')->isTimestamp($end);
