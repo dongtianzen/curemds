@@ -50,12 +50,15 @@
    );
    */
   function _entity_fields_info() {
-    $fields_names = $this->_entity_fields_names();
+    $fields_names = _entity_fields_names();
     foreach ($fields_names as $row) {
       $row_name = strtolower($row[1]);
 
-      if ($row_name, '%') !== false) {
-        $row_name = str_replace('%', '_pct' . $row_name)
+      if (strpos($row_name, '%') !== false) {
+        $row_name = str_replace('%', '_pct', $row_name);
+      }
+      if (strpos($row_name, '-') !== false) {
+        $row_name = str_replace('-', '_', $row_name);
       }
 
       $fields[] = array(
@@ -64,6 +67,7 @@
         'label'      => $row[0],
       );
     }
+
     return $fields;
   }
 

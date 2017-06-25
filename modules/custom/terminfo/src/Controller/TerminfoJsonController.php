@@ -57,20 +57,7 @@ class TerminfoJsonController extends ControllerBase {
         break;
 
       case 'meeting':
-      case 'meetingsummary':
         $output = $this->basicCollectionNodeMeetingContent($section, $entity_id);
-        break;
-
-      case 'meetingbyprogram':
-        $output = $this->listMeetingByProgram($section, $entity_id);
-        break;
-
-      case 'programbyevaluationform':
-        $output = $this->listProgramByEvaluationform($entity_id);
-        break;
-
-      case 'questionlibrarybyevaluationform':
-        $output = $this->listQuestionlibraryByEvaluationform($entity_id);
         break;
 
       case 'user':
@@ -258,21 +245,6 @@ class TerminfoJsonController extends ControllerBase {
 
     switch ($vid) {
       // node
-      case 'evaluation':
-        $output = array(
-          array(
-            'field_label' => 'View',
-            'field_name'  => 'custom_formula_function',
-            'formula_function' => 'linkForViewEvaluatioNode',
-          ),
-          array(
-            'field_label' => 'Edit',
-            'field_name'  => 'custom_formula_function',
-            'formula_function' => 'linkForEditEvaluation',
-          ),
-        );
-        break;
-
       case 'meeting':
         $output = array(
           array(
