@@ -48,12 +48,8 @@ class TerminfoJsonController extends ControllerBase {
     $section = strtolower($section);
 
     switch ($section) {
-      case 'evaluationbymeeting':
-        $output = $this->listEvaluationByMeeting($section, $entity_id);
-        break;
-
-      case 'evaluationformbyquestion':
-        $output = $this->listEvaluationFormByQuestion($entity_id);
+      case 'record':
+        $output = $this->basicCollectionNodeContent($section, $entity_id, $start, $end);
         break;
 
       case 'meeting':
@@ -72,17 +68,65 @@ class TerminfoJsonController extends ControllerBase {
     return $output;
   }
 
+
   /**
    * @return php array
    */
-  public function basicCollectionNodeMeetingContent($entity_bundle, $entity_id = 'all') {
+  public function basicCollectionNodeContent($entity_bundle, $entity_id = NULL, $start = NULL, $end = NULL) {
     $output = array();
 
-    if ($entity_bundle == 'meeting' || $entity_bundle == 'meetingsummary') {
-      $output = $this->listMeeting($entity_bundle, $entity_id);
+    $nids = $this->basicCollectionNids($entity_bundle, $start, $end);
+
+    if (is_array($nids) && $nids) {
+      foreach ($nids as $nid) {
+        $row = array();
+
+        $edit_path = '/node/' . $nid . '/edit';
+        $edit_url = Url::fromUserInput($edit_path);
+        $edit_link = \Drupal::l(t('Edit'), $edit_url);
+
+        $collectionContentFields = $this->collectionContentFields($entity_bundle, $nid, $entity_type = 'node');
+        if (is_array($collectionContentFields)) {
+          $row = array_merge($row, $collectionContentFields);
+        }
+
+        // last
+        $row["Edit"] = $edit_link;
+
+        $output[] = $row;
+      }
     }
 
     return $output;
+  }
+
+  /**
+   * @return php array
+   */
+  public function basicCollectionNids($entity_bundle = NULL, $start = NULL, $end = NULL) {
+    $nids = \Drupal::getContainer()->get('flexinfo.querynode.service')->nidsByBundle($entity_bundle);
+dpm($entity_bundle);
+dpm($nids);
+
+    $start_boolean = \Drupal::getContainer()->get('flexinfo.setting.service')->isTimestamp($start);
+    $end_boolean = \Drupal::getContainer()->get('flexinfo.setting.service')->isTimestamp($end);
+    if ($start_boolean && $end_boolean) {
+      $start_query_date = \Drupal::getContainer()
+        ->get('flexinfo.setting.service')->convertTimeStampToQueryDate($start);
+
+      $end_query_date = \Drupal::getContainer()
+        ->get('flexinfo.setting.service')->convertTimeStampToQueryDate($end);
+
+      if ($entity_bundle == 'record666666') {
+        $nids = \Drupal::getContainer()
+          ->get('flexinfo.querynode.service')
+          ->wrapperNidesByStandardStartEndQueryQate('record', 'field_record_date', $start_query_date, $end_query_date);
+      }
+    }
+
+    // $nids = array_slice($nodes, 0, 10);
+
+    return $nids;
   }
 
   /**
@@ -245,37 +289,19 @@ class TerminfoJsonController extends ControllerBase {
 
     switch ($vid) {
       // node
-      case 'meeting':
+      case 'record':
         $output = array(
           array(
-            'field_label' => 'Program',
-            'field_name'  => 'field_meeting_program',
-          ),
-          array(
-            'field_label' => 'BU',
-            'field_name'  => 'custom_formula_function',
-            'formula_function' => 'getBusinessUnitByMeetingNid',
-          ),
-          array(
             'field_label' => 'Date',
-            'field_name'  => 'field_meeting_date',
+            'field_name'  => 'field_record_date',
           ),
           array(
-            'field_label' => 'Province',
-            'field_name'  => 'field_meeting_province',
+            'field_label' => '血红蛋白',
+            'field_name'  => 'field_record_hgb',
           ),
           array(
-            'field_label' => 'Speaker',
-            'field_name'  => 'field_meeting_speaker',
-          ),
-          array(
-            'field_label' => 'Class',
-            'field_name'  => 'field_meeting_programclass',
-          ),
-          array(
-            'field_label' => 'Num',
-            'field_name'  => 'custom_formula_function',
-            'formula_function' => 'linkForEvaluatioNumByMeeting',
+            'field_label' => '嗜碱性粒细胞总数',
+            'field_name'  => 'field_record_baso',
           ),
           array(
             'field_label' => 'Add',
