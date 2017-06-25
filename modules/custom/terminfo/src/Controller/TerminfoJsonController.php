@@ -300,10 +300,6 @@ class TerminfoJsonController extends ControllerBase {
             'field_label' => 'Class',
             'field_name'  => 'field_meeting_programclass',
           ),
-          // array(
-          //   'field_label' => 'City',
-          //   'field_name'  => 'field_meeting_city',
-          // ),
           array(
             'field_label' => 'Num',
             'field_name'  => 'custom_formula_function',
@@ -317,80 +313,8 @@ class TerminfoJsonController extends ControllerBase {
         );
         break;
 
-      case 'meetingsummary':
-        $output = array(
-          array(
-            'field_label' => 'Program',
-            'field_name'  => 'field_meeting_program',
-          ),
-          array(
-            'field_label' => 'Date',
-            'field_name'  => 'field_meeting_date',
-          ),
-          array(
-            'field_label' => 'Speaker',
-            'field_name'  => 'field_meeting_speaker',
-          ),
-          array(
-            'field_label' => 'Class',
-            'field_name'  => 'field_meeting_programclass',
-          ),
-          array(
-            'field_label' => 'City',
-            'field_name'  => 'field_meeting_city',
-          ),
-          array(
-            'field_label' => 'Province',
-            'field_name'  => 'field_meeting_province',
-          ),
-          array(
-            'field_label' => 'Num',
-            'field_name'  => 'custom_formula_function',
-            'formula_function' => 'linkForEvaluatioNumByMeeting',
-          ),
-          array(
-            'field_label' => 'Add',
-            'field_name'  => 'custom_formula_function',
-            'formula_function' => 'linkForAddEvaluatioByMeeting',
-          ),
-        );
-        break;
 
       // term
-      case 'city':
-        $output = array(
-          array(
-            'field_label' => 'Province',
-            'field_name'  => 'field_city_province',
-          ),
-        );
-        break;
-
-      case 'evaluationform':
-        $output = array(
-          array(
-            'field_label' => 'Questions',
-            'field_name'  => 'custom_formula_function',
-            'formula_function' => 'linkForQuestionlibraryByEvaluationform',
-          ),
-          array(
-            'field_label' => 'Style',
-            'field_name'  => 'custom_formula_function',
-            'formula_function' => 'linkForEvaluationformSnapshot',
-          ),
-          array(
-            'field_label' => 'Programs',
-            'field_name'  => 'custom_formula_function',
-            'formula_function' => 'linkForCountEvaluationformByProgram',
-          ),
-          array(
-            'field_label' => 'Edit',
-            'field_name'  => 'custom_formula_function',
-            'formula_function' => 'linkForEditEvaluationform',
-          ),
-        );
-        break;
-
       case 'item':
         $output = array(
           array(
@@ -404,42 +328,6 @@ class TerminfoJsonController extends ControllerBase {
           array(
             'field_label' => 'Maxi',
             'field_name'  => 'field_item_maximun',
-          ),
-        );
-        break;
-
-      case 'selectquestion':
-        $output = array(
-          array(
-            'field_label' => 'Type',
-            'field_name'  => 'field_queslibr_fieldtype',
-          ),
-          array(
-            'field_label' => 'Scale',
-            'field_name'  => 'field_queslibr_scale',
-          ),
-          array(
-            'field_label' => 'Question Type',
-            'field_name'  => 'field_queslibr_questiontype',
-          ),
-          array(
-            'field_label' => 'Reference',
-            'field_name'  => 'custom_formula_function',
-            'formula_function' => 'countEvaluationFormByQuestion',
-          ),
-          array(
-            'field_label' => 'Tid',
-            'field_name'  => 'custom_formula_function',
-            'formula_function' => 'entityIdForTerm',
-          ),
-        );
-        break;
-
-      case 'selectkeyanswer':
-        $output = array(
-          array(
-            'field_label' => 'Question',
-            'field_name'  => 'field_keyanswer_question',
           ),
         );
         break;
