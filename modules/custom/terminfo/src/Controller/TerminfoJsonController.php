@@ -91,7 +91,7 @@ class TerminfoJsonController extends ControllerBase {
         }
 
         // last
-        $row["Edit"] = $edit_link;
+        // $row["Edit"] = $edit_link;
 
         $output[] = $row;
       }
@@ -193,8 +193,7 @@ class TerminfoJsonController extends ControllerBase {
       foreach ($terms as $tid => $term) {
         $row = array();
 
-        // $edit_path = '/taxonomy/term/' . $tid . '/edit';
-        $edit_path = '/manageinfo/taxonomy_term/' . $tid . '/edit/form';
+        $edit_path = '/taxonomy/term/' . $tid . '/edit';
         $edit_url = Url::fromUserInput($edit_path);
         $edit_link_ob = \Drupal::l(t('Edit'), $edit_url);
 
@@ -298,13 +297,17 @@ class TerminfoJsonController extends ControllerBase {
             'field_name'  => 'field_record_hgb',
           ),
           array(
+            'field_label' => '血小板计数',
+            'field_name'  => 'field_record_plt',
+          ),
+          array(
             'field_label' => '嗜碱性粒细胞总数',
             'field_name'  => 'field_record_baso',
           ),
           array(
-            'field_label' => 'Add',
+            'field_label' => 'View',
             'field_name'  => 'custom_formula_function',
-            'formula_function' => 'linkForAddEvaluatioByMeeting',
+            'formula_function' => 'linkToViewNode',
           ),
         );
         break;
@@ -365,22 +368,6 @@ class TerminfoJsonController extends ControllerBase {
 
     $output = $this->basicCollectionNodeTableArray('evaluation', $evaluation_nids);
     return $output;
-  }
-
-  /**
-   * @return all evaluationform with using specify Question Tid
-   */
-  public function listEvaluationFormByQuestion($question_tid = NULL) {
-    $result = NULL;
-
-    if ($question_tid) {
-      $tids = $this->evaluationFormTidsByQuestion($question_tid);
-
-      $terms = taxonomy_term_load_multiple($tids);
-      $result = $this->basicCollectionTermTableArray('evaluationform', $terms);
-    }
-
-    return $result;
   }
 
   /**
@@ -537,10 +524,10 @@ class TerminfoJsonController extends ControllerBase {
   /**
    * @return
    */
-  public function linkForAddEvaluatioByMeeting($meeting_nid = NULL) {
-    $path = '/manageinfo/node/evaluation/add/form/' . $meeting_nid;
+  public function linkToViewNode($nid = NULL) {
+    $path = '/node/' . $nid;
     $url = Url::fromUserInput($path);
-    $link = \Drupal::l('Add', $url);
+    $link = \Drupal::l('View', $url);
 
     return $link;
   }
@@ -578,57 +565,6 @@ class TerminfoJsonController extends ControllerBase {
   }
 
   /**
-   * @return all evaluationform with using specify Question Tid
-   */
-  public function linkForCountEvaluationFormByQuestion($question_tid = NULL) {
-    $num = count($this->evaluationFormTidsByQuestion($question_tid));
-
-    $link = NULL;
-    if ($question_tid) {
-      $path = '/manageinfo/evaluationformbyquestion/list/' . $question_tid;
-      $url = Url::fromUserInput($path);
-      $link = \Drupal::l($num, $url);
-    }
-
-    return $link;
-  }
-
-  /**
-   * @return all evaluationform with using specify Question Tid
-   */
-  public function linkForCountEvaluationformByProgram($evaluationform_tid = NULL) {
-    $program_tids = \Drupal::getContainer()
-      ->get('flexinfo.queryterm.service')
-      ->wrapperTermTidsByField('program', 'field_program_evaluationform', $evaluationform_tid);
-    $num = count($program_tids);
-
-    $link = NULL;
-    if ($num > 0) {
-      $path = '/manageinfo/programbyevaluationform/list/' . $evaluationform_tid;
-      $url = Url::fromUserInput($path);
-      $link = \Drupal::l($num, $url);
-    }
-
-    return $link;
-  }
-
-  /**
-   * @return
-   */
-  public function linkForCountMeetingByProgram($program_tid = NULL) {
-    $nids = \Drupal::getContainer()
-      ->get('flexinfo.querynode.service')
-      ->nodeNidsByStandardByFieldValue('meeting', 'field_meeting_program', array($program_tid), 'IN');
-    $num = count($nids);
-
-    $path = '/manageinfo/meetingbyprogram/list/' . $program_tid;
-    $url = Url::fromUserInput($path);
-    $link = \Drupal::l($num, $url);
-
-    return $link;
-  }
-
-  /**
    *
    */
   public function linkForEditEvaluation($evaluation_nid = NULL) {
@@ -637,36 +573,6 @@ class TerminfoJsonController extends ControllerBase {
       $path = '/node/' . $evaluation_nid . '/edit';
       $url = Url::fromUserInput($path);
       $link = \Drupal::l('Edit', $url);
-    }
-
-    return $link;
-  }
-
-  /**
-   * @return all evaluationform with using specify Question Tid
-   */
-  public function linkForEditEvaluationform($evaluationform_tid = NULL) {
-    $link = NULL;
-    if ($evaluationform_tid) {
-      $path = '/manageinfo/termdrag/form/' . $evaluationform_tid;
-      $url = Url::fromUserInput($path);
-      $link = \Drupal::l('Edit', $url);
-    }
-
-    return $link;
-  }
-
-  /**
-   * @return Evaluationform Snapshot page Style Demo
-   */
-  public function linkForEvaluationformSnapshot($evaluationform_tid = NULL) {
-    $term = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->load($evaluationform_tid);
-
-    $link = NULL;
-    if ($term) {
-      $path = '/dashpage/evaluationform/snapshot/' . $evaluationform_tid;
-      $url = Url::fromUserInput($path);
-      $link = \Drupal::l(t('Style'), $url);
     }
 
     return $link;
