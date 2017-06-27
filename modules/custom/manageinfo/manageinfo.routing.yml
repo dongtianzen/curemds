@@ -45,8 +45,7 @@ manageinfo.standard.json:
     _controller: '\Drupal\manageinfo\Controller\ManageinfoController::standardJson'
     _title: 'Manageinfo List Json'
   requirements:
-    _permission: 'access content'
-    _role: 'authenticated'
+    _access: 'TRUE'
 
 manageinfo.standard.list:
   path: '/manageinfo/{section}/list/{entity_id}/{start}/{end}'
@@ -54,8 +53,7 @@ manageinfo.standard.list:
     _controller: '\Drupal\manageinfo\Controller\ManageinfoController::standardList'
     _title: 'Manageinfo List'
   requirements:
-    _permission: 'access content'
-    _role: 'authenticated'
+    _access: 'TRUE'
 
 manageinfo.standard.table:
   path: '/manageinfo/{section}/table/{entity_id}/{start}/{end}'
