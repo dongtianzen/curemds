@@ -266,7 +266,7 @@ class TerminfoJsonController extends ControllerBase {
 
       foreach ($custom_manage_fields as $field_row) {
         if ($field_row['field_name'] == 'custom_formula_function') {
-          $output[$field_row['field_label']] = $this->{$field_row['formula_function']}($entity_id);
+          $output[$field_row['field_label']] = $this->{$field_row['formula_function']}($entity_id, $field_row['field_label']);
         }
         else {    // noraml custom field
           $output[$field_row['field_label']] = $this->flexinfoEntityService->getEntity('field')
@@ -289,7 +289,7 @@ class TerminfoJsonController extends ControllerBase {
       case 'record':
         $output = array(
           array(
-            'field_label' => 'Date',
+            'field_label' => '日期',
             'field_name'  => 'field_record_date',
           ),
           array(
@@ -301,11 +301,20 @@ class TerminfoJsonController extends ControllerBase {
             'field_name'  => 'field_record_plt',
           ),
           array(
-            'field_label' => '嗜碱性粒细胞总数',
-            'field_name'  => 'field_record_baso',
+            'field_label' => '白细胞总数',
+            'field_name'  => 'field_record_wbc',
           ),
           array(
-            'field_label' => 'View',
+            'field_label' => '中性粒细胞总数2',
+            'field_name'  => 'field_record_neut',
+          ),
+          array(
+            'field_label' => '中性粒细胞总数',
+            'field_name'  => 'custom_formula_function',
+            'formula_function' => 'colorFieldValueByRange',
+          ),
+          array(
+            'field_label' => '查看',
             'field_name'  => 'custom_formula_function',
             'formula_function' => 'linkToViewNode',
           ),
@@ -524,10 +533,35 @@ class TerminfoJsonController extends ControllerBase {
   /**
    * @return
    */
+  public function colorFieldValueByRange($nid = NULL, $item_name) {
+    $terms = \Drupal::entityTypeManager()
+          ->getStorage('taxonomy_term')
+          ->loadByProperties(['name' => $item_name]);
+
+    $term = reset($terms);
+
+    $field_name = 'field_record_';
+    $field_name .= strtolower($this->flexinfoEntityService->getEntity('field')
+      ->getFieldSingleValue('taxonomy_term', $term, 'field_item_abbrevname'));
+
+    $entity  = \Drupal::entityTypeManager()->getStorage('node')->load($nid);
+    $output = $this->flexinfoEntityService->getEntity('field')
+      ->getFieldFirstValue('node', $entity, $field_name);
+
+    if ($term) {
+      // $output = $output . $term->id();
+    }
+
+    return $output;
+  }
+
+  /**
+   * @return
+   */
   public function linkToViewNode($nid = NULL) {
     $path = '/node/' . $nid;
     $url = Url::fromUserInput($path);
-    $link = \Drupal::l('View', $url);
+    $link = \Drupal::l('查看', $url);
 
     return $link;
   }
