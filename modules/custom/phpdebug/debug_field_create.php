@@ -52,23 +52,32 @@
   function _entity_fields_info() {
     $fields_names = _entity_fields_names();
     foreach ($fields_names as $row) {
-      $row_name = strtolower($row[1]);
-
-      if (strpos($row_name, '%') !== false) {
-        $row_name = str_replace('%', '_pct', $row_name);
-      }
-      if (strpos($row_name, '-') !== false) {
-        $row_name = str_replace('-', '_', $row_name);
-      }
-
       $fields[] = array(
-        'field_name' => 'field_record_' . $row_name,
+        'field_name' => _convertTermAbbNameToNodeRecordFieldName($row[1]),
         'type'       => 'string',
         'label'      => $row[0],
       );
     }
 
     return $fields;
+  }
+
+  /**
+   *
+   */
+  function _convertTermAbbNameToNodeRecordFieldName($abb_name) {
+    $row_name = strtolower($abb_name);
+
+    if (strpos($row_name, '%') !== false) {
+      $row_name = str_replace('%', '_pct', $row_name);
+    }
+    if (strpos($row_name, '-') !== false) {
+      $row_name = str_replace('-', '_', $row_name);
+    }
+
+    $field_name = 'field_record_' . $row_name,
+
+    return $field_name;
   }
 
   function _entity_fields_names() {
