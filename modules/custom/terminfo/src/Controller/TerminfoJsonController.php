@@ -533,7 +533,7 @@ class TerminfoJsonController extends ControllerBase {
   /**
    * @return
    */
-  public function colorFieldValueByRange($nid = NULL, $item_name) {
+  public function colorFieldValueByRange($nid, $item_name) {
     $terms = \Drupal::entityTypeManager()
           ->getStorage('taxonomy_term')
           ->loadByProperties(['name' => $item_name]);
@@ -545,11 +545,22 @@ class TerminfoJsonController extends ControllerBase {
       ->getFieldSingleValue('taxonomy_term', $term, 'field_item_abbrevname'));
 
     $entity  = \Drupal::entityTypeManager()->getStorage('node')->load($nid);
-    $output = $this->flexinfoEntityService->getEntity('field')
-      ->getFieldFirstValue('node', $entity, $field_name);
+    $result_value = \Drupal::getContainer()->get('flexinfo.field.service')
+      ->getFieldFirstValue($entity, $field_name);
 
+    $output = $result_value;
     if ($term) {
-      // $output = $output . $term->id();
+      $max = \Drupal::getContainer()->get('flexinfo.field.service')
+        ->getFieldFirstValue($term, 'field_item_maximun');
+      $min = \Drupal::getContainer()->get('flexinfo.field.service')
+        ->getFieldFirstValue($term, 'field_item_minimun');
+      $range = $max - $min;
+
+      if ($result_value < $min) {
+        $output = '<div class="">';
+          $output .= $result_value;
+        $output = '</div>';
+      }
     }
 
     return $output;
