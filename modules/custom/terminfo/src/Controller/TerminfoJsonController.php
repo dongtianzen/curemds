@@ -548,6 +548,41 @@ class TerminfoJsonController extends ControllerBase {
   /**
    * @return
    */
+  public function colorHslValue($result_value, $term) {
+    // default color
+    $output = 'hsl(0, 0%, 50%)';
+
+    $min = \Drupal::getContainer()->get('flexinfo.field.service')
+      ->getFieldFirstValue($term, 'field_item_minimun');
+
+    if ($result_value < $min) {
+      $diff = $min - $result_value;
+
+      $max = \Drupal::getContainer()->get('flexinfo.field.service')
+        ->getFieldFirstValue($term, 'field_item_maximun');
+
+      $range = $max - $min;
+
+      if ($range > 0) {
+        $percent = $diff / $range;
+
+        $hsl_color_end = 60;
+        $hsl_color_start = 0;
+
+        $hsl_color_angle = ($end - $start) * $percent,
+        $hsl_value = $start + $hsl_color_angle;
+
+        $output = 'hsl(' . $hsl_value . ', 100%, 50%)';
+      }
+    }
+
+
+    return $output;
+  }
+
+  /**
+   * @return
+   */
   public function colorFieldValueByRange($nid, $item_name) {
     $terms = \Drupal::entityTypeManager()
           ->getStorage('taxonomy_term')
@@ -566,17 +601,9 @@ class TerminfoJsonController extends ControllerBase {
 
     $output = $result_value;
     if ($term) {
-      $max = \Drupal::getContainer()->get('flexinfo.field.service')
-        ->getFieldFirstValue($term, 'field_item_maximun');
-      $min = \Drupal::getContainer()->get('flexinfo.field.service')
-        ->getFieldFirstValue($term, 'field_item_minimun');
-      $range = $max - $min;
-
-      if ($result_value < $min) {
-        $output = '<div class="">';
-          $output .= $result_value;
-        $output = '</div>';
-      }
+      $output = '<div class="" style="color:' . $this->colorHslValue($result_value, $term) . '">';
+        $output .= $result_value;
+      $output = '</div>';
     }
 
     return $output;
