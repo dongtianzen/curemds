@@ -573,10 +573,13 @@ class TerminfoJsonController extends ControllerBase {
         $hsl_color_end = 30;
         $hsl_color_start = 0;
 
-        $hsl_color_angle = ($hsl_color_end - $hsl_color_start) * $percent;
+        $hsl_color_angle = ($hsl_color_end - $hsl_color_start) * $percentage;
         $hsl_value = $hsl_color_end - $hsl_color_angle;
 
+        $lightness = (0.5 - ($percentage / 2)) * 100;
+
         $output = 'hsl(' . $hsl_value . ', 100%, 50%)';
+        // $output = 'hsl(0, 100%, ' . $lightness . '%)';
       }
     }
 
