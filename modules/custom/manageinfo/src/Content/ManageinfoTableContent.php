@@ -31,7 +31,14 @@ class ManageinfoTableContent extends ControllerBase {
     $output['contentSection'] = array(
       $DashpageJsonGenerator->getBlockOne(
         array('class' => "col-md-12", 'type' => "commonTable", 'blockClasses' => "height-400 overflow-visible", 'top' => array('enable' => FALSE)),
-        $DashpageJsonGenerator->getCommonTable($option = array(), $table_value)
+        $DashpageJsonGenerator->getCommonTable(
+          array(
+            "tableSettings" => array(
+              "pagination" => FALSE,
+            ),
+          ),
+          $table_value
+        )
       ),
     );
 
