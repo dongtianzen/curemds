@@ -294,19 +294,18 @@ class TerminfoJsonController extends ControllerBase {
           ),
           array(
             'field_label' => '血红蛋白',
-            'field_name'  => 'field_record_hgb',
+            'field_name'  => 'custom_formula_function',
+            'formula_function' => 'colorFieldValueByRange',
           ),
           array(
             'field_label' => '血小板计数',
-            'field_name'  => 'field_record_plt',
+            'field_name'  => 'custom_formula_function',
+            'formula_function' => 'colorFieldValueByRange',
           ),
           array(
             'field_label' => '白细胞总数',
-            'field_name'  => 'field_record_wbc',
-          ),
-          array(
-            'field_label' => '中性粒细胞总数2',
-            'field_name'  => 'field_record_neut',
+            'field_name'  => 'custom_formula_function',
+            'formula_function' => 'colorFieldValueByRange',
           ),
           array(
             'field_label' => '中性粒细胞总数',
@@ -540,7 +539,7 @@ class TerminfoJsonController extends ControllerBase {
       $row_name = str_replace('-', '_', $row_name);
     }
 
-    $field_name = 'field_record_' . $row_name,
+    $field_name = 'field_record_' . $row_name;
 
     return $field_name;
   }
@@ -549,8 +548,8 @@ class TerminfoJsonController extends ControllerBase {
    * @return
    */
   public function colorHslValue($result_value, $term) {
-    // default color
-    $output = 'hsl(0, 0%, 50%)';
+    // default color #002840
+    $output = 'hsl(203, 100%, 12.5%)';
 
     $min = \Drupal::getContainer()->get('flexinfo.field.service')
       ->getFieldFirstValue($term, 'field_item_minimun');
@@ -562,15 +561,20 @@ class TerminfoJsonController extends ControllerBase {
         ->getFieldFirstValue($term, 'field_item_maximun');
 
       $range = $max - $min;
+      $average = ($max + $min) / 2;
+      $step = 0.5;
 
       if ($range > 0) {
-        $percent = $diff / $range;
+        $percentage = 1 - ($diff / $range * $step);
+        if ($percentage > 1) {
+          $percentage = 1;
+        }
 
-        $hsl_color_end = 60;
+        $hsl_color_end = 30;
         $hsl_color_start = 0;
 
-        $hsl_color_angle = ($end - $start) * $percent,
-        $hsl_value = $start + $hsl_color_angle;
+        $hsl_color_angle = ($hsl_color_end - $hsl_color_start) * $percent;
+        $hsl_value = $hsl_color_end - $hsl_color_angle;
 
         $output = 'hsl(' . $hsl_value . ', 100%, 50%)';
       }
@@ -603,7 +607,7 @@ class TerminfoJsonController extends ControllerBase {
     if ($term) {
       $output = '<div class="" style="color:' . $this->colorHslValue($result_value, $term) . '">';
         $output .= $result_value;
-      $output = '</div>';
+      $output .= '</div>';
     }
 
     return $output;
