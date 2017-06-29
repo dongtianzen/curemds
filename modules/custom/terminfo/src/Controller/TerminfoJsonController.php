@@ -206,9 +206,9 @@ class TerminfoJsonController extends ControllerBase {
         }
 
         // last
-        if ($edit_link_column) {
-          $row["Edit"] = $edit_link_ob;
-        }
+        // if ($edit_link_column) {
+        //   $row["Edit"] = $edit_link_ob;
+        // }
 
         $output[] = $row;
       }
@@ -562,7 +562,7 @@ class TerminfoJsonController extends ControllerBase {
 
       $range = $max - $min;
       $average = ($max + $min) / 2;
-      $step = 0.5;
+      $step = 0.3;
 
       if ($range > 0) {
         $percentage = 1 - ($diff / $range * $step);
@@ -574,15 +574,18 @@ class TerminfoJsonController extends ControllerBase {
         $hsl_color_start = 0;
 
         $hsl_color_angle = ($hsl_color_end - $hsl_color_start) * $percentage;
-        $hsl_value = $hsl_color_end - $hsl_color_angle;
+        $hsl_value = $hsl_color_start + $hsl_color_angle;
+        $hsl_value = number_format($hsl_value, 2);
 
-        $lightness = (0.5 - ($percentage / 2)) * 100;
+        $lightness = number_format(((0.5 - ($percentage / 2)) * 100), 2);
 
-        $output = 'hsl(' . $hsl_value . ', 100%, 50%)';
+        // $saturation = number_format(((0.5 - ($percentage / 2)) * 100), 2);
+
+        // $output = 'hsl(' . $hsl_value . ', 100%, 50%)';
         // $output = 'hsl(0, 100%, ' . $lightness . '%)';
+        $output = 'hsl(' . $hsl_value . ', 100%, ' . $lightness . '%)';
       }
     }
-
 
     return $output;
   }
