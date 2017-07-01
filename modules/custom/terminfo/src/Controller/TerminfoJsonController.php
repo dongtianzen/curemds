@@ -584,10 +584,12 @@ class TerminfoJsonController extends ControllerBase {
           ->loadByProperties(['name' => $item_name]);
     $term = reset($terms);
 
-    $field_name = \Drupal::getContainer()->get('stateinfo.setting.service')->convertTermAbbNameToNodeRecordFieldName($this
-      ->flexinfoEntityService
-      ->getEntity('field')
-      ->getFieldSingleValue('taxonomy_term', $term, 'field_item_abbrevname')
+    $field_name = \Drupal::getContainer()
+      ->get('stateinfo.setting.service')
+      ->convertTermAbbNameToNodeRecordFieldName(
+        $this->flexinfoEntityService
+          ->getEntity('field')
+          ->getFieldSingleValue('taxonomy_term', $term, 'field_item_abbrevname')
     );
 
     $entity  = \Drupal::entityTypeManager()->getStorage('node')->load($nid);
