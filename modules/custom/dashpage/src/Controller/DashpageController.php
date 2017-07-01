@@ -172,7 +172,7 @@ class DashpageController extends ControllerBase {
   /**
    * {@inheritdoc}
    */
-  public function getDashpageSnapshot($meeting_nodes, $section, $entity_id) {
+  public function getDashpageSnapshot($section, $entity_id) {
     $DashpageObjectContent = new DashpageObjectContent();
 
     // combine like -- programSnapshotObjectContent
@@ -180,7 +180,7 @@ class DashpageController extends ControllerBase {
 
     $object_content_data = NULL;
     if (method_exists($DashpageObjectContent, $content_method)) {
-      $object_content_data = $DashpageObjectContent->{$content_method}($meeting_nodes, $entity_id);
+      $object_content_data = $DashpageObjectContent->{$content_method}($section, $entity_id);
     }
 
     return $object_content_data;

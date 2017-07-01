@@ -204,16 +204,6 @@ class DashpageBlockGenerator extends ControllerBase {
       // Middle Middle content
       $output .= '<div class="{{block.middle.middleMiddle.middleMiddleMiddleClass}}">';
         $output .= '<div data-ng-controller="AngularDataTables" class="row margin-0 margin-top-16">';
-          $output .= '<div class="col-xs-12 text-align-center">';
-            $output .= '<span id="select-filter-wrapper">';
-              $output .= '<select id="table-content-filter">';
-                $output .= '<option value="Webinars" selected="">Webinars</option>';
-                $output .= '<option value="Upcoming">Upcoming</option>';
-                $output .= '<option value="Completed">Completed</option>';
-                $output .= '<option value="Incomplete">Incomplete</option>';
-              $output .= '</select>';
-            $output .= '</span>';
-          $output .= '</div>';
           $output .= '<table id="mildder-table" datatable="ng" dt-options="dtOptionsMildderTable" dt-instance="dtIntanceCallback" class="stripe responsive no-wrap">';
             $output .= '<thead>';
             $output .= '<tr>';

@@ -81,10 +81,10 @@ class DashpageGridContent {
   /**
    * @return array
    */
-  public function tableCustomitem($meeting_nodes = array()) {
+  public function tableCustomitem($section, $entity_id) {
     $query_container = \Drupal::getContainer()->get('flexinfo.querynode.service');
     $query = $query_container->queryNidsByBundle('record');
-dpm(999);
+
     $nids = $query_container->runQueryWithGroup($query);
     $nodes = \Drupal::entityTypeManager()->getStorage('node')->loadMultiple($nids);
 
@@ -150,7 +150,14 @@ class DashpageBlockContent extends DashpageGridContent{
     $DashpageJsonGenerator = new DashpageJsonGenerator();
     $output = $DashpageJsonGenerator->getBlockOne(
       $block_option,
-      $DashpageJsonGenerator->getCommonTable(NULL, $table_content)
+      $DashpageJsonGenerator->getCommonTable(
+        array(
+          "tableSettings" => array(
+            "pagination" => FALSE,
+          ),
+        ),
+        $table_content
+      )
     );
 
     return $output;
@@ -171,9 +178,9 @@ class DashpageBlockContent extends DashpageGridContent{
   /**
    *
    */
-  public function blockTableCustomitem($meeting_nodes = array(), $entity_id = 'all') {
+  public function blockTableCustomitem($section, $entity_id = 'all') {
     $table_content = \Drupal::getContainer()
-      ->get('flexinfo.chart.service')->convertContentToTableArray($this->tableCustomitem($meeting_nodes));
+      ->get('flexinfo.chart.service')->convertContentToTableArray($this->tableCustomitem($section, $entity_id));
 
     $output = $this->blockTableGenerate($table_content, t('单项指标'));
 
@@ -338,8 +345,8 @@ class DashpageObjectContent extends DashpageBlockContent {
   /**
    * @return php object, not JSON
    */
-  public function customitemSnapshotObjectContent($meeting_nodes = array()) {
-    $output['contentSection'][] = $this->blockTableCustomitem();
+  public function customitemSnapshotObjectContent($section, $entity_id) {
+    $output['contentSection'][] = $this->blockTableCustomitem($section, $entity_id);
     return $output;
   }
 
