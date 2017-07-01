@@ -105,25 +105,16 @@ class DashpageController extends ControllerBase {
 
     if ($section) {
       switch ($section) {
-        case 'businessunit':
-        case 'diseasestate':
-        case 'evaluation':
-        case 'evaluationform':
         case 'home':
         case 'meeting':
         case 'program':
-        case 'therapeuticarea':
-        case 'webinar':
 
         // user
         case 'speakersummary':
 
         // datatable
-        case 'eventevaluations':
+        case 'customitem':
         case 'eventstatus':
-        case 'eventsummary':
-        case 'programsummary':
-        case 'speakerrate':
           break;
 
         default:
@@ -199,52 +190,9 @@ class DashpageController extends ControllerBase {
    * @param $start = 2016-01-01T23:30:00, $end = 2016-12-31T23:30:00
    */
   public function getObjectContentData($section, $entity_id, $start, $end) {
-    $object_content_data = $this->getDashpageSnapshot($meeting_nodes, $section, $entity_id);
+    $object_content_data = $this->getDashpageSnapshot($section, $entity_id);
 
     return $object_content_data;
   }
 
-  /**
-   *
-   */
-  public function guidePage() {
-    $DashpageContentGenerator = new DashpageContentGenerator();
-    $markup = $DashpageContentGenerator->guidePage();
-
-    $build = array(
-      '#type' => 'markup',
-      '#header' => 'header',
-      '#markup' => $markup,
-      '#allowed_tags' => \Drupal::getContainer()->get('flexinfo.setting.service')->adminTag(),
-      '#attached' => array(
-        'library' => array(
-          'dashpage/guide_page',
-        ),
-      ),
-    );
-
-    return $build;
-  }
-
-  /**
-   *
-   */
-  public function userRegister() {
-    $DashpageContentGenerator = new DashpageContentGenerator();
-    $markup = $DashpageContentGenerator->userRegister();
-
-    $build = array(
-      '#type' => 'markup',
-      '#header' => 'header',
-      '#markup' => $markup,
-      '#allowed_tags' => \Drupal::getContainer()->get('flexinfo.setting.service')->adminTag(),
-      '#attached' => array(
-        'library' => array(
-          'dashpage/register_page',
-        ),
-      ),
-    );
-
-    return $build;
-  }
 }

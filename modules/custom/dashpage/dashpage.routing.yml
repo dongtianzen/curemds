@@ -23,21 +23,3 @@ dashpage.standard.menu.item:
     _title: 'Snapshot Page'
   requirements:
     _permission: 'access content'
-
-# snapshot
-dashpage.guide.page:
-  path: '/home/guide/page'
-  defaults:
-    _controller: '\Drupal\dashpage\Controller\DashpageController::guidePage'
-    _title: 'Guide Page'
-  requirements:
-    _permission: 'access content'
-
-# user register
-dashpage.user.register:
-  path: '/home/user/register'
-  defaults:
-    _controller: '\Drupal\dashpage\Controller\DashpageController::userRegister'
-    _title: 'User Register'
-  requirements:
-    _permission: 'access content'

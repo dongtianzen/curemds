@@ -81,34 +81,24 @@ class DashpageGridContent {
   /**
    * @return array
    */
-  public function tableWebinar($meeting_nodes = array()) {
+  public function tableCustomitem($meeting_nodes = array()) {
     $query_container = \Drupal::getContainer()->get('flexinfo.querynode.service');
-    $query = $query_container->queryNidsByBundle('webinar');
-
+    $query = $query_container->queryNidsByBundle('record');
+dpm(999);
     $nids = $query_container->runQueryWithGroup($query);
     $nodes = \Drupal::entityTypeManager()->getStorage('node')->loadMultiple($nids);
 
     if (is_array($nodes)) {
       foreach ($nodes as $node) {
-        $topic_term = \Drupal::entityTypeManager()
-          ->getStorage('taxonomy_term')
-          ->load(\Drupal::getContainer()->get('flexinfo.field.service')->getFieldFirstTargetId($node, 'field_webinar_topic'));
+        // $topic_term = \Drupal::entityTypeManager()
+        //   ->getStorage('taxonomy_term')
+        //   ->load(\Drupal::getContainer()->get('flexinfo.field.service')->getFieldFirstTargetId($node, 'field_webinar_topic'));
 
-        $data = "<div class=\'col-xs-12 team-card-header\'>";
-          $data .= \Drupal::getContainer()->get('flexinfo.field.service')->getFieldFirstTargetIdTermName($node, 'field_webinar_topic');
-        $data .= "</div>";
-        $data .= "<div class=\'col-xs-12 team-card-content\'>";
-          $data .= \Drupal::getContainer()->get('flexinfo.field.service')->getFieldFirstValue($topic_term, 'field_topic_objectives');
-        $data .= "</div>";
-
-        $timestamp = \Drupal::getContainer()->get('flexinfo.field.service')->getFieldFirstValueDateTimestamp($node, 'field_webinar_date');
 
         $output[] = array(
-          'NAME' => \Drupal::getContainer()->get('flexinfo.field.service')->getFieldFirstTargetIdTermName($node, 'field_webinar_topic'),
-          'DATE' => \Drupal::getContainer()->get('flexinfo.field.service')->getFieldFirstValueDateFormat($node, 'field_webinar_date'),
-          'TIME' => \Drupal::service('date.formatter')->format($timestamp, 'html_time'),
-          'DETAILS' => '<a href="" ng-click="tablePopUp(\'' . $data . '\')">View</a>',
-          'STATUS' => \Drupal::getContainer()->get('flexinfo.node.service')->getWebinarStatus($node),
+          'NAME' => 'field_webinar_topic',
+          // 'NAME' => \Drupal::getContainer()->get('flexinfo.field.service')->getFieldFirstTargetIdTermName($node, 'field_webinar_topic'),
+          // 'DATE' => \Drupal::getContainer()->get('flexinfo.field.service')->getFieldFirstValueDateFormat($node, 'field_webinar_date'),
         );
       }
     }
@@ -181,11 +171,11 @@ class DashpageBlockContent extends DashpageGridContent{
   /**
    *
    */
-  public function blockTableWebinarSchedule($meeting_nodes = array(), $entity_id = 'all') {
+  public function blockTableCustomitem($meeting_nodes = array(), $entity_id = 'all') {
     $table_content = \Drupal::getContainer()
-      ->get('flexinfo.chart.service')->convertContentToTableArray($this->tableWebinar($meeting_nodes));
+      ->get('flexinfo.chart.service')->convertContentToTableArray($this->tableCustomitem($meeting_nodes));
 
-    $output = $this->blockTableGenerate($table_content, t('Webinar Schedule'));
+    $output = $this->blockTableGenerate($table_content, t('单项指标'));
 
     return $output;
   }
@@ -348,12 +338,8 @@ class DashpageObjectContent extends DashpageBlockContent {
   /**
    * @return php object, not JSON
    */
-  public function webinarSnapshotObjectContent($meeting_nodes = array()) {
-    $output['contentSection'][] = $this->blockTileWebinarSchedule();
-    // $output['contentSection'][] = $this->blockTableWebinarSchedule();
-    $output['contentSection'][] = $this->blockPhpTableWebinarSchedule();
-
-
+  public function customitemSnapshotObjectContent($meeting_nodes = array()) {
+    $output['contentSection'][] = $this->blockTableCustomitem();
     return $output;
   }
 
