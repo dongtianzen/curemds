@@ -577,13 +577,13 @@ class TerminfoJsonController extends ControllerBase {
         $hsl_value = $hsl_color_start + $hsl_color_angle;
         $hsl_value = number_format($hsl_value, 2);
 
-        $lightness = number_format(((0.5 - ($percentage / 2)) * 100), 2);
+        $lightness = number_format(((0.5 - ($percentage / 10)) * 100), 2);
 
-        // $saturation = number_format(((0.5 - ($percentage / 2)) * 100), 2);
+        $saturation = number_format($percentage, 2);
 
         // $output = 'hsl(' . $hsl_value . ', 100%, 50%)';
-        // $output = 'hsl(0, 100%, ' . $lightness . '%)';
         $output = 'hsl(' . $hsl_value . ', 100%, ' . $lightness . '%)';
+        // $output = 'hsl(' . $hsl_value . ', '. $saturation . '%, ' . $lightness . '%)';
       }
     }
 
