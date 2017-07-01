@@ -70,49 +70,6 @@ class ManageinfoController extends ControllerBase {
 
   /**
    * {@inheritdoc}
-   */
-  public function entityEditForm($entity, $nid) {
-    if ($entity == 'user') {
-      $user_roles = \Drupal::currentUser()->getRoles();
-      if (\Drupal::currentUser()->id() == 1 || \Drupal::currentUser()->id() == $nid || in_array("siteadmin", $user_roles)) {
-      }
-      else {
-        \Drupal::getContainer()->get('flexinfo.setting.service')->throwExceptionPage(404);
-      }
-    }
-
-    $build = $this->angularFormTemplate($entity, $bundle = NULL, $nid);
-    return $build;
-  }
-
-  /**
-   * {@inheritdoc}
-   */
-  public function entityEditJson($entity, $nid) {
-    $ManageinfoJsonGenerator = new ManageinfoJsonGenerator();
-
-    if ($entity == 'node') {
-      $output = $ManageinfoJsonGenerator->nodeEditJson($entity, $nid);
-    }
-    elseif ($entity == 'taxonomy_term') {
-      $output = $ManageinfoJsonGenerator->termEditJson($nid);
-    }
-    elseif ($entity == 'user') {
-      $output = $ManageinfoJsonGenerator->userEditJson($nid);
-    }
-
-    return new JsonResponse($output);
-
-    $build = array(
-      '#type' => 'markup',
-      '#markup' => json_encode($output),
-    );
-
-    return $build;
-  }
-
-  /**
-   * {@inheritdoc}
    * use Drupal\dashpage\Content\DashpageContentGenerator;
    * @return render table
    */
