@@ -11,6 +11,7 @@ use Drupal\Core\Url;
 use Drupal\Component\Utility\Unicode;
 
 use Drupal\dashpage\Content\DashpageEventLayout;
+use Drupal\terminfo\Controller\TerminfoJsonController;
 
 /**
  *
@@ -88,17 +89,26 @@ class DashpageGridContent {
     $nids = $query_container->runQueryWithGroup($query);
     $nodes = \Drupal::entityTypeManager()->getStorage('node')->loadMultiple($nids);
 
+    // term
+    $terms = \Drupal::entityTypeManager()
+          ->getStorage('taxonomy_term')
+          ->loadByProperties(['name' => $entity_id]);
+    $term = reset($terms);
+
+    // $field_name = $TerminfoJsonController->convertTermAbbNameToNodeRecordFieldName(
+    //   \Drupal::getContainer()->get('flexinfo.field.service')->getFieldFirstValue($term, 'field_item_abbrevname')
+    // );
+
+    // $result_value = \Drupal::getContainer()->get('flexinfo.field.service')
+    //   ->getFieldFirstValue($entity, $field_name);
+
     if (is_array($nodes)) {
       foreach ($nodes as $node) {
-        // $topic_term = \Drupal::entityTypeManager()
-        //   ->getStorage('taxonomy_term')
-        //   ->load(\Drupal::getContainer()->get('flexinfo.field.service')->getFieldFirstTargetId($node, 'field_webinar_topic'));
-
-
         $output[] = array(
-          'NAME' => 'field_webinar_topic',
-          // 'NAME' => \Drupal::getContainer()->get('flexinfo.field.service')->getFieldFirstTargetIdTermName($node, 'field_webinar_topic'),
-          // 'DATE' => \Drupal::getContainer()->get('flexinfo.field.service')->getFieldFirstValueDateFormat($node, 'field_webinar_date'),
+          // $term->getName() => \Drupal::getContainer()
+          //   ->get('flexinfo.field.service')
+          //   ->getFieldFirstValue($node, $field_name),
+          'cc' =>  66,
         );
       }
     }
