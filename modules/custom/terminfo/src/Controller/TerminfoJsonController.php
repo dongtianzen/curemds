@@ -529,21 +529,6 @@ class TerminfoJsonController extends ControllerBase {
 
   /** - - - - - - link - - - - - - - - - - - - - - - - - - - - - - - - -  */
 
-  public function convertTermAbbNameToNodeRecordFieldName($abb_name) {
-    $row_name = strtolower($abb_name);
-
-    if (strpos($row_name, '%') !== false) {
-      $row_name = str_replace('%', '_pct', $row_name);
-    }
-    if (strpos($row_name, '-') !== false) {
-      $row_name = str_replace('-', '_', $row_name);
-    }
-
-    $field_name = 'field_record_' . $row_name;
-
-    return $field_name;
-  }
-
   /**
    * @return
    */
@@ -599,7 +584,7 @@ class TerminfoJsonController extends ControllerBase {
           ->loadByProperties(['name' => $item_name]);
     $term = reset($terms);
 
-    $field_name = $this->convertTermAbbNameToNodeRecordFieldName($this
+    $field_name = \Drupal::getContainer()->get('stateinfo.setting.service')->convertTermAbbNameToNodeRecordFieldName($this
       ->flexinfoEntityService
       ->getEntity('field')
       ->getFieldSingleValue('taxonomy_term', $term, 'field_item_abbrevname')

@@ -1,0 +1,4 @@
+services:
+  #
+  stateinfo.setting.service:
+    class: Drupal\stateinfo\Service\StateinfoSettingService

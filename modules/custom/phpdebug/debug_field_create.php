@@ -53,7 +53,7 @@
     $fields_names = _entity_fields_names();
     foreach ($fields_names as $row) {
       $fields[] = array(
-        'field_name' => _convertTermAbbNameToNodeRecordFieldName($row[1]),
+        'field_name' => \Drupal::getContainer()->get('stateinfo.setting.service')->convertTermAbbNameToNodeRecordFieldName($row[1]),
         'type'       => 'string',
         'label'      => $row[0],
       );
