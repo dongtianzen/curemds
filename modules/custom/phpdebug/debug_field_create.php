@@ -62,24 +62,6 @@
     return $fields;
   }
 
-  /**
-   *
-   */
-  function _convertTermAbbNameToNodeRecordFieldName($abb_name) {
-    $row_name = strtolower($abb_name);
-
-    if (strpos($row_name, '%') !== false) {
-      $row_name = str_replace('%', '_pct', $row_name);
-    }
-    if (strpos($row_name, '-') !== false) {
-      $row_name = str_replace('-', '_', $row_name);
-    }
-
-    $field_name = 'field_record_' . $row_name,
-
-    return $field_name;
-  }
-
   function _entity_fields_names() {
     $output = array(
       // array("嗜酸性粒细胞总数","EO"),

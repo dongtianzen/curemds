@@ -85,6 +85,7 @@ class DashpageGridContent {
   public function tableCustomitem($section, $entity_id) {
     $query_container = \Drupal::getContainer()->get('flexinfo.querynode.service');
     $query = $query_container->queryNidsByBundle('record');
+    $query = $query->sort('field_record_date', 'DESC');
 
     $nids = $query_container->runQueryWithGroup($query);
     $nodes = \Drupal::entityTypeManager()->getStorage('node')->loadMultiple($nids);
@@ -95,21 +96,34 @@ class DashpageGridContent {
           ->loadByProperties(['name' => $entity_id]);
     $term = reset($terms);
 
-    // $field_name = \Drupal::getContainer()->get('stateinfo.setting.service')->convertTermAbbNameToNodeRecordFieldName(
-    //   \Drupal::getContainer()->get('flexinfo.field.service')->getFieldFirstValue($term, 'field_item_abbrevname')
-    // );
+    if ($term) {
+      $field_name = \Drupal::getContainer()
+        ->get('stateinfo.setting.service')
+        ->convertTermAbbNameToNodeRecordFieldName(
+          \Drupal::getContainer()
+            ->get('flexinfo.field.service')
+            ->getFieldFirstValue($term, 'field_item_abbrevname')
+      );
 
-    // $result_value = \Drupal::getContainer()->get('flexinfo.field.service')
-    //   ->getFieldFirstValue($entity, $field_name);
+      if (is_array($nodes)) {
+        foreach ($nodes as $node) {
+          $result_value = \Drupal::getContainer()->get('flexinfo.field.service')
+            ->getFieldFirstValue($node, $field_name);
 
-    if (is_array($nodes)) {
-      foreach ($nodes as $node) {
-        $output[] = array(
-          // $term->getName() => \Drupal::getContainer()
-          //   ->get('flexinfo.field.service')
-          //   ->getFieldFirstValue($node, $field_name),
-          'cc' =>  66,
-        );
+          $colorHslValue = \Drupal::getContainer()
+            ->get('stateinfo.setting.service')
+            ->colorHslValue($result_value, $term);
+
+          $result_color_value = '<div class="" style="color:' . $colorHslValue . '">';
+            $result_color_value .= $result_value;
+          $result_color_value .= '</div>';
+
+          $output[] = array(
+            '日期' => \Drupal::getContainer()->get('flexinfo.field.service')
+              ->getFieldFirstValue($node, 'field_record_date'),
+            $term->getName() => $result_color_value,
+          );
+        }
       }
     }
 

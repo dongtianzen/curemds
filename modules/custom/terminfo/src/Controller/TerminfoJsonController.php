@@ -532,52 +532,6 @@ class TerminfoJsonController extends ControllerBase {
   /**
    * @return
    */
-  public function colorHslValue($result_value, $term) {
-    // default color #002840
-    $output = 'hsl(203, 100%, 12.5%)';
-
-    $min = \Drupal::getContainer()->get('flexinfo.field.service')
-      ->getFieldFirstValue($term, 'field_item_minimun');
-
-    if ($result_value < $min) {
-      $diff = $min - $result_value;
-
-      $max = \Drupal::getContainer()->get('flexinfo.field.service')
-        ->getFieldFirstValue($term, 'field_item_maximun');
-
-      $range = $max - $min;
-      $average = ($max + $min) / 2;
-      $step = 0.3;
-
-      if ($range > 0) {
-        $percentage = 1 - ($diff / $range * $step);
-        if ($percentage > 1) {
-          $percentage = 1;
-        }
-
-        $hsl_color_end = 30;
-        $hsl_color_start = 0;
-
-        $hsl_color_angle = ($hsl_color_end - $hsl_color_start) * $percentage;
-        $hsl_value = $hsl_color_start + $hsl_color_angle;
-        $hsl_value = number_format($hsl_value, 2);
-
-        $lightness = number_format(((0.5 - ($percentage / 10)) * 100), 2);
-
-        $saturation = number_format($percentage, 2);
-
-        // $output = 'hsl(' . $hsl_value . ', 100%, 50%)';
-        $output = 'hsl(' . $hsl_value . ', 100%, ' . $lightness . '%)';
-        // $output = 'hsl(' . $hsl_value . ', '. $saturation . '%, ' . $lightness . '%)';
-      }
-    }
-
-    return $output;
-  }
-
-  /**
-   * @return
-   */
   public function colorFieldValueByRange($nid, $item_name) {
     $terms = \Drupal::entityTypeManager()
           ->getStorage('taxonomy_term')
@@ -596,9 +550,13 @@ class TerminfoJsonController extends ControllerBase {
     $result_value = \Drupal::getContainer()->get('flexinfo.field.service')
       ->getFieldFirstValue($entity, $field_name);
 
+    $colorHslValue = \Drupal::getContainer()
+      ->get('stateinfo.setting.service')
+      ->colorHslValue($result_value, $term);
+
     $output = $result_value;
     if ($term) {
-      $output = '<div class="" style="color:' . $this->colorHslValue($result_value, $term) . '">';
+      $output = '<div class="" style="color:' . $colorHslValue . '">';
         $output .= $result_value;
       $output .= '</div>';
     }
