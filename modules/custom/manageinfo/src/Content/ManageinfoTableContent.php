@@ -112,11 +112,11 @@ class ManageinfoTableContent extends ControllerBase {
 
     $output = '';
     $output .= '<div class="margin-left-12 float-left">';
-      $output .= '<div class="md-headline display-inline-block">';
-        $output .= '<span class="padding-top-12 margin-left-40 font-size-20">';
-          $output .= $title;
-        $output .= '</span>';
-      $output .= '</div>';
+      // $output .= '<div class="md-headline display-inline-block">';
+      //   $output .= '<span class="padding-top-12 margin-left-40 font-size-20">';
+      //     $output .= $title;
+      //   $output .= '</span>';
+      // $output .= '</div>';
 
       if ($internal_url) {
         $output .= '<span class="table-top-add-button padding-left-4">';

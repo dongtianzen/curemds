@@ -71,42 +71,6 @@ class ManageinfoController extends ControllerBase {
   /**
    * {@inheritdoc}
    */
-  public function entityAddForm($entity, $bundle, $nid) {
-    $build = $this->angularFormTemplate($entity, $bundle, $nid);
-    return $build;
-  }
-
-  /**
-   * {@inheritdoc}
-   */
-  public function entityAddJson($entity, $bundle, $nid) {
-    $output = NULL;
-
-    $ManageinfoJsonGenerator = new ManageinfoJsonGenerator();
-
-    if ($entity == 'node') {
-      $output = $ManageinfoJsonGenerator->nodeAddJson($entity, $bundle, $nid);
-    }
-    elseif ($entity == 'taxonomy_term') {
-      $output = $ManageinfoJsonGenerator->termAddJson($nid);
-    }
-    elseif ($entity == 'user') {
-      $output = $ManageinfoJsonGenerator->userAddJson($nid);
-    }
-
-    return new JsonResponse($output);
-
-    $build = array(
-      '#type' => 'markup',
-      '#markup' => json_encode($output),
-    );
-
-    return $build;
-  }
-
-  /**
-   * {@inheritdoc}
-   */
   public function entityEditForm($entity, $nid) {
     if ($entity == 'user') {
       $user_roles = \Drupal::currentUser()->getRoles();
