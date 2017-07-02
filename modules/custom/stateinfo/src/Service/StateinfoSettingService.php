@@ -60,9 +60,9 @@ class StateinfoSettingService {
 
   /**
    *
-   \Drupal::getContainer()->get('stateinfo.setting.service')->convertTermAbbNameToNodeRecordFieldName($abb_name);
+   \Drupal::getContainer()->get('stateinfo.setting.service')->convertTermAbbNameToStandardName($abb_name);
    */
-  public function convertTermAbbNameToNodeRecordFieldName($abb_name) {
+  public function convertTermAbbNameToStandardName($abb_name) {
     $row_name = strtolower($abb_name);
 
     if (strpos($row_name, '%') !== false) {
@@ -71,6 +71,16 @@ class StateinfoSettingService {
     if (strpos($row_name, '-') !== false) {
       $row_name = str_replace('-', '_', $row_name);
     }
+
+    return $row_name;
+  }
+
+  /**
+   *
+   \Drupal::getContainer()->get('stateinfo.setting.service')->convertTermAbbNameToNodeRecordFieldName($abb_name);
+   */
+  public function convertTermAbbNameToNodeRecordFieldName($abb_name) {
+    $row_name = $this->convertTermAbbNameToStandardName($abb_name);
 
     $field_name = 'field_record_' . $row_name;
 

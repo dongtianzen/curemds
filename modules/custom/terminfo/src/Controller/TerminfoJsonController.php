@@ -340,6 +340,11 @@ class TerminfoJsonController extends ControllerBase {
             'field_label' => 'Unit',
             'field_name'  => 'field_item_unit',
           ),
+          array(
+            'field_label' => '查看',
+            'field_name'  => 'custom_formula_function',
+            'formula_function' => 'linkToViewCustomitem',
+          ),
         );
         break;
 
@@ -569,6 +574,19 @@ class TerminfoJsonController extends ControllerBase {
    */
   public function linkToViewNode($nid = NULL) {
     $path = '/node/' . $nid;
+    $url = Url::fromUserInput($path);
+    $link = \Drupal::l('查看', $url);
+
+    return $link;
+  }
+
+  /**
+   * @return
+   */
+  public function linkToViewCustomitem($tid = NULL) {
+    $term = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->load($tid);
+
+    $path = '/dashpage/customitem/snapshot/' . \Drupal::getContainer()->get('stateinfo.setting.service')->convertTermAbbNameToStandardName($term->getName());
     $url = Url::fromUserInput($path);
     $link = \Drupal::l('查看', $url);
 
