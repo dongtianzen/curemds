@@ -81,7 +81,7 @@ class DashpageGridContent {
   /**
    * @return array
    */
-  public function tableCustomitem($section, $entity_id) {
+  public function getCustomitemNodes($section, $entity_id) {
     $query_container = \Drupal::getContainer()->get('flexinfo.querynode.service');
     $query = $query_container->queryNidsByBundle('record');
     $query = $query->sort('field_record_date', 'DESC');
@@ -89,11 +89,27 @@ class DashpageGridContent {
     $nids = $query_container->runQueryWithGroup($query);
     $nodes = \Drupal::entityTypeManager()->getStorage('node')->loadMultiple($nids);
 
-    // term
+    return $nodes;
+  }
+
+  /**
+   * @return array
+   */
+  public function getCustomitemTerm($section, $entity_id) {
     $terms = \Drupal::entityTypeManager()
           ->getStorage('taxonomy_term')
           ->loadByProperties(['name' => $entity_id]);
     $term = reset($terms);
+
+    return $term;
+  }
+
+  /**
+   * @return array
+   */
+  public function tableCustomitem($section, $entity_id) {
+    $nodes = $this->getCustomitemNodes($section, $entity_id);
+    $term = $this->getCustomitemTerm($section, $entity_id);
 
     if ($term) {
       $field_name = \Drupal::getContainer()
@@ -139,30 +155,48 @@ class DashpageBlockContent extends DashpageGridContent{
   /**
    *
    */
-  public function blockChartLineForNodeByMonth($entity_type = NULL, $field_name = NULL) {
+  public function blockChartLineForOneCustomItem($section, $entity_id) {
+    $nodes = $this->getCustomitemNodes($section, $entity_id);
+    $term = $this->getCustomitemTerm($section, $entity_id);
+
+    if ($term) {
+      $field_name = \Drupal::getContainer()
+        ->get('stateinfo.setting.service')
+        ->convertTermAbbNameToNodeRecordFieldName(
+          \Drupal::getContainer()
+            ->get('flexinfo.field.service')
+            ->getFieldFirstValue($term, 'field_item_abbrevname')
+      );
+
+      if (is_array($nodes)) {
+        foreach ($nodes as $node) {
+          $result_value[] = \Drupal::getContainer()
+            ->get('flexinfo.field.service')
+            ->getFieldFirstValue($node, $field_name);
+
+          $result_label[] = \Drupal::getContainer()
+            ->get('flexinfo.field.service')
+            ->getFieldFirstValue($node, 'field_record_date');
+        }
+      }
+    }
+
     $DashpageJsonGenerator = new DashpageJsonGenerator();
 
-    $query_container = \Drupal::getContainer()->get('flexinfo.querynode.service');
-    $nids = $query_container->nidsByBundle($entity_type);
-    $nodes = \Drupal::entityManager()->getStorage('node')->loadMultiple($nids);
+    $chart_data = \Drupal::getContainer()->get('flexinfo.chart.service')->renderChartLineDataSet($result_value, $result_label);
 
-    // month
-    $month_grid = $this->gridByMonth($nodes, $field_name);
-    $month_tab = \Drupal::getContainer()->get('flexinfo.chart.service')->renderChartLineDataSet($month_grid['data'], $month_grid['label']);
-
-    $block_title = t('Number of ') . ucwords($entity_type);
     $output = $DashpageJsonGenerator->getBlockOne(
       array(
         'top'  => array(
-          'value' => $block_title,          // block top title value
+          'value' => ucwords($entity_id),          // block top title value
         ),
         'class' => "col-md-12",
       ),
       $DashpageJsonGenerator->getChartLine(
         array(
-          "chartOptions" => array('yAxisLabel' => $block_title),
+          "chartOptions" => array('yAxisLabel' => ''),
         ),
-        $month_tab
+        $chart_data
       )
     );
 
@@ -402,6 +436,7 @@ class DashpageObjectContent extends DashpageBlockContent {
    * @return php object, not JSON
    */
   public function customitemSnapshotObjectContent($section, $entity_id) {
+    $output['contentSection'][] = $this->blockChartLineForOneCustomItem($section, $entity_id);
     $output['contentSection'][] = $this->blockTableCustomitem($section, $entity_id);
     return $output;
   }
