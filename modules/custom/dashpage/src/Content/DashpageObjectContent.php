@@ -159,6 +159,13 @@ class DashpageBlockContent extends DashpageGridContent{
     $nodes = $this->getCustomitemNodes($section, $entity_id);
     $term = $this->getCustomitemTerm($section, $entity_id);
 
+    $minimun = \Drupal::getContainer()
+      ->get('flexinfo.field.service')
+      ->getFieldFirstValue($term, 'field_item_minimun');
+    $maximun = \Drupal::getContainer()
+      ->get('flexinfo.field.service')
+      ->getFieldFirstValue($term, 'field_item_maximun');
+
     if ($term) {
       $field_name = \Drupal::getContainer()
         ->get('stateinfo.setting.service')
@@ -177,13 +184,32 @@ class DashpageBlockContent extends DashpageGridContent{
           $result_label[] = \Drupal::getContainer()
             ->get('flexinfo.field.service')
             ->getFieldFirstValue($node, 'field_record_date');
+
+          $min_value_array[] = $minimun;
+          $max_value_array[] = $maximun;
         }
       }
+
+      $result_value_array = array(
+        $min_value_array,
+        $max_value_array,
+        $result_value
+      );
     }
+
+    $max_value = max($result_value);
+    $max_value = max(array($max_value, $maximun));
+
+    $min_value = min($result_value);
+    $min_value = min(array($min_value, $minimun));
+
+    $range = $max_value - $min_value;
+    $range_rate = 0.2;
 
     $DashpageJsonGenerator = new DashpageJsonGenerator();
 
-    $chart_data = \Drupal::getContainer()->get('flexinfo.chart.service')->renderChartLineDataSet($result_value, $result_label);
+    // $chart_data = \Drupal::getContainer()->get('flexinfo.chart.service')->renderChartLineDataSet($result_value, $result_label);
+    $chart_data = \Drupal::getContainer()->get('flexinfo.chart.service')->renderChartMultiLineDataSet($result_value_array, $result_label);
 
     $output = $DashpageJsonGenerator->getBlockOne(
       array(
@@ -194,7 +220,11 @@ class DashpageBlockContent extends DashpageGridContent{
       ),
       $DashpageJsonGenerator->getChartLine(
         array(
-          "chartOptions" => array('yAxisLabel' => ''),
+          "chartOptions" => array(
+            'graphMax' => $max_value + ($range * $range_rate),
+            'graphMin' => $min_value - ($range * $range_rate),
+            'yAxisLabel' => ''
+          ),
         ),
         $chart_data
       )
