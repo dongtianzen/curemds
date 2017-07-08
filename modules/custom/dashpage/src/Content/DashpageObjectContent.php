@@ -10,7 +10,6 @@ namespace Drupal\dashpage\Content;
 use Drupal\Core\Url;
 use Drupal\Component\Utility\Unicode;
 
-use Drupal\dashpage\Content\DashpageEventLayout;
 use Drupal\terminfo\Controller\TerminfoJsonController;
 
 /**
@@ -136,6 +135,39 @@ class DashpageGridContent {
  *
  */
 class DashpageBlockContent extends DashpageGridContent{
+
+  /**
+   *
+   */
+  public function blockChartLineForNodeByMonth($entity_type = NULL, $field_name = NULL) {
+    $DashpageJsonGenerator = new DashpageJsonGenerator();
+
+    $query_container = \Drupal::getContainer()->get('flexinfo.querynode.service');
+    $nids = $query_container->nidsByBundle($entity_type);
+    $nodes = \Drupal::entityManager()->getStorage('node')->loadMultiple($nids);
+
+    // month
+    $month_grid = $this->gridByMonth($nodes, $field_name);
+    $month_tab = \Drupal::getContainer()->get('flexinfo.chart.service')->renderChartLineDataSet($month_grid['data'], $month_grid['label']);
+
+    $block_title = t('Number of ') . ucwords($entity_type);
+    $output = $DashpageJsonGenerator->getBlockOne(
+      array(
+        'top'  => array(
+          'value' => $block_title,          // block top title value
+        ),
+        'class' => "col-md-12",
+      ),
+      $DashpageJsonGenerator->getChartLine(
+        array(
+          "chartOptions" => array('yAxisLabel' => $block_title),
+        ),
+        $month_tab
+      )
+    );
+
+    return $output;
+  }
 
   /**
    *
