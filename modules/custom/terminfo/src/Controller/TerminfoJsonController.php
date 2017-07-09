@@ -75,7 +75,7 @@ class TerminfoJsonController extends ControllerBase {
   /**
    * @return php array
    */
-  public function basicCollectionNodeContentCustom($entity_type, $entity_bundle, $entity_id = NULL, $start = NULL, $end = NULL) {
+  public function basicCollectionNodeContentCustom($entity_specific_type, $entity_bundle, $entity_id = NULL, $start = NULL, $end = NULL) {
     $output = array();
 
     $nids = $this->basicCollectionNids($entity_bundle, $start, $end);
@@ -83,17 +83,10 @@ class TerminfoJsonController extends ControllerBase {
       foreach ($nids as $nid) {
         $row = array();
 
-        $edit_path = '/node/' . $nid . '/edit';
-        $edit_url = Url::fromUserInput($edit_path);
-        $edit_link = \Drupal::l(t('Edit'), $edit_url);
-
-        $collectionContentFields = $this->collectionContentFields($entity_bundle, $nid, $entity_type = 'node');
+        $collectionContentFields = $this->collectionContentFields($entity_specific_type, $nid, $entity_type = 'node');
         if (is_array($collectionContentFields)) {
           $row = array_merge($row, $collectionContentFields);
         }
-
-        // last
-        // $row["Edit"] = $edit_link;
 
         $output[] = $row;
       }
@@ -354,42 +347,7 @@ class TerminfoJsonController extends ControllerBase {
         break;
 
       case 'recordall':
-        $output = array(
-          array(
-            'field_label' => '日期',
-            'field_name'  => 'field_record_date',
-          ),
-          array(
-            'field_label' => '血红蛋白',
-            'field_name'  => 'custom_formula_function',
-            'formula_function' => 'colorFieldValueByRange',
-          ),
-          // array(
-          //   'field_label' => '血小板计数',
-          //   'field_name'  => 'custom_formula_function',
-          //   'formula_function' => 'colorFieldValueByRange',
-          // ),
-          // array(
-          //   'field_label' => '白细胞总数',
-          //   'field_name'  => 'custom_formula_function',
-          //   'formula_function' => 'colorFieldValueByRange',
-          // ),
-          // array(
-          //   'field_label' => '中性粒细胞总数',
-          //   'field_name'  => 'custom_formula_function',
-          //   'formula_function' => 'colorFieldValueByRange',
-          // ),
-          // array(
-          //   'field_label' => '中性粒细胞百分数',
-          //   'field_name'  => 'custom_formula_function',
-          //   'formula_function' => 'colorFieldValueByRange',
-          // ),
-          array(
-            'field_label' => '查看',
-            'field_name'  => 'custom_formula_function',
-            'formula_function' => 'linkToViewNode',
-          ),
-        );
+        $output = $this->customManageFieldsForRecordAll();
         break;
 
       // term
@@ -437,54 +395,50 @@ class TerminfoJsonController extends ControllerBase {
     return $output;
   }
 
-  /** - - - - - - table - - - - - - - - - - - - - - - - - - - - - - - - -  */
-
   /**
-   * @param $section = evaluationByMeeting
+   * @return php array
    */
-  public function listEvaluationByMeeting($section, $meeting_nid = NULL) {
-    $evaluation_nids = array();
-    if ($meeting_nid != 'all') {
-      $evaluation_nids = \Drupal::getContainer()
-        ->get('flexinfo.querynode.service')
-        ->nodeNidsByStandardByFieldValue('evaluation', 'field_evaluation_meetingnid', $meeting_nid);
+  public function customManageFieldsForRecordAll() {
+    $output[] = array(
+      'field_label' => '日期',
+      'field_name'  => 'field_record_date',
+    );
+
+    $trees = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->loadTree('item', 0);
+    foreach ($trees as $value) {
+      $output[] = array(
+        'field_label' => $value->name,
+        'field_name'  => 'custom_formula_function',
+        'formula_function' => 'colorFieldValueByRange',
+      );
     }
 
-    $output = $this->basicCollectionNodeTableArray('evaluation', $evaluation_nids);
+    $output[] =  array(
+      'field_label' => '查看',
+      'field_name'  => 'custom_formula_function',
+      'formula_function' => 'linkToViewNode',
+    );
+
     return $output;
   }
+
+  /** - - - - - - table - - - - - - - - - - - - - - - - - - - - - - - - -  */
 
   /**
    *
    */
-  public function listMeetingByProgram($section, $program_tid = NULL) {
+  public function recordAllList($entity_bundle, $entity_id = NULL) {
     $result = NULL;
 
-    if ($program_tid) {
-      $nids = \Drupal::getContainer()
-        ->get('flexinfo.querynode.service')
-        ->nodeNidsByStandardByFieldValue('meeting', 'field_meeting_program', array($program_tid), 'IN');
+    if ($entity_id) {
+      $nids = $this->basicCollectionNids($entity_bundle, $start, $end);
 
-      $result = $this->basicCollectionNodeTableArray('meeting', $nids);
+      $result = $this->basicCollectionNodeTableArray('record', $nids);
     }
 
     return $result;
   }
 
-  /**
-   *
-   */
-  public function listMeeting($entity_bundle, $entity_id = NULL) {
-    $output = array();
-
-    $query_container = \Drupal::getContainer()->get('flexinfo.querynode.service');
-    $query = $query_container->queryNidsByBundle('meeting');
-    $query->sort('field_meeting_date', 'DESC');
-    $meeting_nids = $query_container->runQueryWithGroup($query);
-
-    $output = $this->basicCollectionNodeTableArray($entity_bundle, $meeting_nids);
-    return $output;
-  }
 
   /**
    * @return all Question set with specify evaluationform
