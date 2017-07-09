@@ -49,7 +49,11 @@ class TerminfoJsonController extends ControllerBase {
 
     switch ($section) {
       case 'record':
-        $output = $this->basicCollectionNodeContent($section, $entity_id, $start, $end);
+        $output = $this->basicCollectionNodeContent('record', $entity_id, $start, $end);
+        break;
+
+      case 'recordall':
+        $output = $this->basicCollectionNodeContentCustom('recordall', 'record', $entity_id, $start, $end);
         break;
 
       case 'meeting':
@@ -68,6 +72,35 @@ class TerminfoJsonController extends ControllerBase {
     return $output;
   }
 
+  /**
+   * @return php array
+   */
+  public function basicCollectionNodeContentCustom($entity_type, $entity_bundle, $entity_id = NULL, $start = NULL, $end = NULL) {
+    $output = array();
+
+    $nids = $this->basicCollectionNids($entity_bundle, $start, $end);
+    if (is_array($nids) && $nids) {
+      foreach ($nids as $nid) {
+        $row = array();
+
+        $edit_path = '/node/' . $nid . '/edit';
+        $edit_url = Url::fromUserInput($edit_path);
+        $edit_link = \Drupal::l(t('Edit'), $edit_url);
+
+        $collectionContentFields = $this->collectionContentFields($entity_bundle, $nid, $entity_type = 'node');
+        if (is_array($collectionContentFields)) {
+          $row = array_merge($row, $collectionContentFields);
+        }
+
+        // last
+        // $row["Edit"] = $edit_link;
+
+        $output[] = $row;
+      }
+    }
+
+    return $output;
+  }
 
   /**
    * @return php array
@@ -320,6 +353,44 @@ class TerminfoJsonController extends ControllerBase {
         );
         break;
 
+      case 'recordall':
+        $output = array(
+          array(
+            'field_label' => '日期',
+            'field_name'  => 'field_record_date',
+          ),
+          array(
+            'field_label' => '血红蛋白',
+            'field_name'  => 'custom_formula_function',
+            'formula_function' => 'colorFieldValueByRange',
+          ),
+          // array(
+          //   'field_label' => '血小板计数',
+          //   'field_name'  => 'custom_formula_function',
+          //   'formula_function' => 'colorFieldValueByRange',
+          // ),
+          // array(
+          //   'field_label' => '白细胞总数',
+          //   'field_name'  => 'custom_formula_function',
+          //   'formula_function' => 'colorFieldValueByRange',
+          // ),
+          // array(
+          //   'field_label' => '中性粒细胞总数',
+          //   'field_name'  => 'custom_formula_function',
+          //   'formula_function' => 'colorFieldValueByRange',
+          // ),
+          // array(
+          //   'field_label' => '中性粒细胞百分数',
+          //   'field_name'  => 'custom_formula_function',
+          //   'formula_function' => 'colorFieldValueByRange',
+          // ),
+          array(
+            'field_label' => '查看',
+            'field_name'  => 'custom_formula_function',
+            'formula_function' => 'linkToViewNode',
+          ),
+        );
+        break;
 
       // term
       case 'item':
