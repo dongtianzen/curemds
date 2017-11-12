@@ -48,10 +48,10 @@ class DashpageGridContent {
         $get_program_name = $program_entity->getName();
         if(strlen($get_program_name) > 40) {
           $program_text  = '<span class="table-tooltip width-180">';
-          $program_text .= Unicode::substr($program_entity->getName(), 0, 40) . '...';
-          $program_text .= '<span class="table-tooltip-text">';
-          $program_text .= $program_entity->getName();
-          $program_text .= '</span>';
+            $program_text .= Unicode::substr($program_entity->getName(), 0, 40) . '...';
+            $program_text .= '<span class="table-tooltip-text">';
+              $program_text .= $program_entity->getName();
+            $program_text .= '</span>';
           $program_text .= '</span>';
         }
         else {
@@ -307,86 +307,6 @@ class DashpageBlockContent extends DashpageGridContent{
     return $output;
   }
 
-  /**
-   *
-   */
-  public function blockTileWebinarSchedule($meeting_nodes = array(), $entity_id = 'all') {
-    $table_content = \Drupal::getContainer()
-      ->get('flexinfo.chart.service')->convertContentToTableArray($this->tableWebinar($meeting_nodes));
-
-    $DashpageJsonGenerator = new DashpageJsonGenerator();
-
-    $output = $DashpageJsonGenerator->getBlockMultiContainer(
-      array(
-        'class' => "col-sm-12",
-        'top' => array('enable' => false),
-        'middle' => array(
-          'middleTop' => 'getBlockTabContainer-Bottom',
-          'middleBottom' => 'getBlockTabContainer-Bottom',
-        ),
-      ),
-      array(
-        $DashpageJsonGenerator->getBlockHtmlSnippet(
-          array(
-            'class' => "col-xs-12 col-lg-5",
-            "top" => array("enable" => false)
-          ),
-          $DashpageJsonGenerator->dashpageTaskList()
-        ),
-
-        $DashpageJsonGenerator->getBlockOne(
-          array(
-            'class' => "col-lg-2 col-sm-4 padding-10",
-            'middle' => array(
-              'middleTop' => '<span class="col-xs-12 padding-0"><span class="color-009ddf text-align-center">Webinar Participation</span></span>',
-              'middleBottom' => '<span class="color-a5d23e  display-block text-align-center">Sessions Attended<span class="color-b5b5b5 padding-left-4">(6)</span></span>',
-
-            ),
-          ),
-          $DashpageJsonGenerator->getChartDoughnut(NUll, $DashpageJsonGenerator->generateSampleData("doughnut_chart_data"))
-        ),
-
-        $DashpageJsonGenerator->getBlockOne(
-          array(
-            'class' => "col-lg-2 col-sm-4 padding-10",
-            'middle' => array(
-              'middleTop' => '<span class="visibility-hidden">Webinar Participation</span>',
-              'middleBottom' => '<span class="color-009ddf display-block text-align-center">Sessions Remaining<span class="color-b5b5b5 padding-left-4">(4)</span></span>',
-
-            ),
-          ),
-          $DashpageJsonGenerator->getChartDoughnut(
-            array(
-              'chartOptions' => array(
-                'crossText' => array('','','45%'),
-              )
-            ),
-            $DashpageJsonGenerator->generateSampleData("doughnut_chart_data2")
-          )
-        ),
-        $DashpageJsonGenerator->getBlockOne(
-          array(
-            'class' => "col-lg-2 col-sm-4 padding-10",
-            'middle' => array(
-              'middleTop' => '<span class="visibility-hidden">Webinar Participation</span>',
-              'middleBottom' => '<span class="color-ec247f  display-block text-align-center">Sessions Missed<span class="color-b5b5b5 padding-left-4">(2)</span></span>',
-            ),
-          ),
-          $DashpageJsonGenerator->getChartDoughnut(
-            array(
-              'chartOptions' => array(
-                'crossText' => array('','','16%'),
-              )
-            ),
-            $DashpageJsonGenerator->generateSampleData("doughnut_chart_data3")
-          )
-        ),
-      )
-    );
-
-    return $output;
-  }
-
 }
 
 /**
@@ -400,28 +320,6 @@ class DashpageObjectContent extends DashpageBlockContent {
   public function homeSnapshotObjectContent($meeting_nodes = array(), $entity_id = NULL) {
     $output = $this->homeSnapshotCanadaObjectContent($meeting_nodes, $entity_id);
 
-    return $output;
-  }
-
-  /**
-   * @return php object, not JSON
-   */
-  public function homeSnapshotCanadaObjectContent($meeting_nodes = array(), $entity_id = NULL, $page_view = 'home_view') {
-    $DashpageJsonGenerator = new DashpageJsonGenerator();
-
-    $output['fixedSection'] = $this->blockTileCanada($meeting_nodes);
-
-    $output['contentSection'][] = $this->blockTabsCompletedEventsCanada($meeting_nodes, $entity_id, $page_view);
-    $output['contentSection'][] = $this->blockTabsTotalReachCanada($meeting_nodes, $entity_id, $page_view);
-    $output['contentSection'][] = $this->blockTabsKeyQuestionCanada($meeting_nodes, $entity_id, $page_view, 2734, t('How would you rate the overall quality of the Educational program?'));
-    $output['contentSection'][] = $this->blockTabsKeyQuestionCanada($meeting_nodes, $entity_id, $page_view, 3011, t('How likely is it that you will make a change to your clinical practice'));
-    $output['contentSection'][] = $this->blockTabsKeyQuestionCanada($meeting_nodes, $entity_id, $page_view, 2731, t('How likely are you to recommend this program to a colleague?'));
-    // $output['contentSection'][] = $this->blockTabsTopRateTable($meeting_nodes);
-
-    // $output['contentSection'][] = $DashpageJsonGenerator->getBlockOne(
-    //   array('top' => array('value' => "googleMap"), 'class' => "col-md-12"),
-    //   $DashpageJsonGenerator->getChartLine()
-    // );
     return $output;
   }
 
