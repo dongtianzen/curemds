@@ -582,7 +582,7 @@ class TerminfoJsonController extends ControllerBase {
 
     $colorHslValue = \Drupal::getContainer()
       ->get('stateinfo.setting.service')
-      ->colorHslValue($result_value, $term);
+      ->colorRgbValue($result_value, $term);
 
     $output = $result_value;
     if ($term) {

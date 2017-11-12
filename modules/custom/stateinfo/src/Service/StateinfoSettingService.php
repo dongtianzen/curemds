@@ -48,15 +48,64 @@ class StateinfoSettingService {
   /**
    *
    */
-  public function getColorHslValueByPercentageStep($percentage = 1) {
+  public function colorRgbValue($result_value, $term) {
+    // default color #002840
+    $output = '002840';
+
+    $min = \Drupal::getContainer()->get('flexinfo.field.service')
+      ->getFieldFirstValue($term, 'field_item_minimun');
+
+    if ($result_value < $min) {
+      $diff = $min - $result_value;
+
+      $max = \Drupal::getContainer()->get('flexinfo.field.service')
+        ->getFieldFirstValue($term, 'field_item_maximun');
+
+      $range = $max - $min;
+      $average = ($max + $min) / 2;
+      $step = 1;
+
+      if ($range > 0) {
+        $percentage = 1 / ($diff / $range);
+        if ($percentage > 1) {
+          $percentage = 1;
+        }
+        dpm($diff . ' - - - ' . $min . ' - - - ' . $percentage);
+        $output = $this->getColorRgbValueByPercentageStep($percentage);
+      }
+    }
+
+    return $output;
+  }
+
+  /**
+   *
+   */
+  public function getColorRgbValueByPercentageStep($percentage = 1) {
     // default color #002840
     $output = '002840';
 
     if ($percentage < 1) {
       $color_array = $this->getColorPlateRgb();
       $num_of_color = count($color_array);
+
+      $color_percentage_step = \Drupal::getContainer()
+        ->get('flexinfo.calc.service')
+        ->getPercentage(1, $num_of_color) / 100;
+
+      for ($i = 0; $i < $num_of_color; $i++) {
+        if ($percentage < $color_percentage_step) {
+          $output = $color_array[$i];
+
+          break;
+        }
+
+        $color_percentage_step += $color_percentage_step;
+      }
     }
-dpm($percentage);
+
+    $output = '#' . $output;
+
     return $output;
   }
 
@@ -67,9 +116,9 @@ dpm($percentage);
     $output = array(
       'ff3333',
       'ff9933',
-      'ffff33',
+      // 'ffff33',   // yellow
       '99ff33',
-      '33ff33',
+      '33ff33',   // green
       '33ff99',
       '33ffff',
       '3399ff',

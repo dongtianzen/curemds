@@ -127,7 +127,7 @@ class DashpageGridContent {
 
           $colorHslValue = \Drupal::getContainer()
             ->get('stateinfo.setting.service')
-            ->colorHslValue($result_value, $term);
+            ->colorRgbValue($result_value, $term);
 
           $result_color_value = '<div class="" style="color:' . $colorHslValue . '">';
             $result_color_value .= $result_value;
