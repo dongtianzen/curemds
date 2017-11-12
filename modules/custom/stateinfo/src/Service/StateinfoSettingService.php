@@ -38,22 +38,84 @@ class StateinfoSettingService {
           $percentage = 1;
         }
 
-        $hsl_color_end = 30;
-        $hsl_color_start = 0;
-
-        $hsl_color_angle = ($hsl_color_end - $hsl_color_start) * $percentage;
-        $hsl_value = $hsl_color_start + $hsl_color_angle;
-        $hsl_value = number_format($hsl_value, 2);
-
-        $lightness = number_format(((0.5 - ($percentage / 10)) * 100), 2);
-
-        $saturation = number_format($percentage, 2);
-
-        // $output = 'hsl(' . $hsl_value . ', 100%, 50%)';
-        $output = 'hsl(' . $hsl_value . ', 100%, ' . $lightness . '%)';
-        // $output = 'hsl(' . $hsl_value . ', '. $saturation . '%, ' . $lightness . '%)';
+        $output = $this->getColorHslValueByPercentage($percentage);
       }
     }
+
+    return $output;
+  }
+
+  /**
+   *
+   */
+  public function getColorHslValueByPercentageStep($percentage = 1) {
+    // default color #002840
+    $output = 'hsl(203, 100%, 12.5%)';
+
+    $hsl_color_end = 30;
+    $hsl_color_start = 0;
+
+    $hsl_color_angle = ($hsl_color_end - $hsl_color_start) * $percentage;
+    $hsl_value = $hsl_color_start + $hsl_color_angle;
+    $hsl_value = number_format($hsl_value, 2);
+
+    $lightness = number_format(((0.5 - ($percentage / 10)) * 100), 2);
+
+    $saturation = number_format($percentage, 2);
+
+    // $output = 'hsl(' . $hsl_value . ', 100%, 50%)';
+    $output = 'hsl(' . $hsl_value . ', 100%, ' . $lightness . '%)';
+    // $output = 'hsl(' . $hsl_value . ', '. $saturation . '%, ' . $lightness . '%)';
+
+    return $output;
+  }
+
+  /**
+   *
+   */
+  public function getColorPlate() {
+    // default color #002840
+    $output = 'hsl(203, 100%, 12.5%)';
+
+    $hsl_color_end = 30;
+    $hsl_color_start = 0;
+
+    $hsl_color_angle = ($hsl_color_end - $hsl_color_start) * $percentage;
+    $hsl_value = $hsl_color_start + $hsl_color_angle;
+    $hsl_value = number_format($hsl_value, 2);
+
+    $lightness = number_format(((0.5 - ($percentage / 10)) * 100), 2);
+
+    $saturation = number_format($percentage, 2);
+
+    // $output = 'hsl(' . $hsl_value . ', 100%, 50%)';
+    $output = 'hsl(' . $hsl_value . ', 100%, ' . $lightness . '%)';
+    // $output = 'hsl(' . $hsl_value . ', '. $saturation . '%, ' . $lightness . '%)';
+
+    return $output;
+  }
+
+  /**
+   *
+   */
+  public function getColorHslValueByPercentage($percentage = 1) {
+    // default color #002840
+    $output = 'hsl(203, 100%, 12.5%)';
+
+    $hsl_color_end = 30;
+    $hsl_color_start = 0;
+
+    $hsl_color_angle = ($hsl_color_end - $hsl_color_start) * $percentage;
+    $hsl_value = $hsl_color_start + $hsl_color_angle;
+    $hsl_value = number_format($hsl_value, 2);
+
+    $lightness = number_format(((0.5 - ($percentage / 10)) * 100), 2);
+
+    $saturation = number_format($percentage, 2);
+
+    // $output = 'hsl(' . $hsl_value . ', 100%, 50%)';
+    $output = 'hsl(' . $hsl_value . ', 100%, ' . $lightness . '%)';
+    // $output = 'hsl(' . $hsl_value . ', '. $saturation . '%, ' . $lightness . '%)';
 
     return $output;
   }
