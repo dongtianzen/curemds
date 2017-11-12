@@ -38,7 +38,7 @@ class StateinfoSettingService {
           $percentage = 1;
         }
 
-        $output = $this->getColorHslValueByPercentage($percentage);
+        $output = $this->getColorHslValueByPercentageStep($percentage);
       }
     }
 
@@ -50,22 +50,32 @@ class StateinfoSettingService {
    */
   public function getColorHslValueByPercentageStep($percentage = 1) {
     // default color #002840
-    $output = 'hsl(203, 100%, 12.5%)';
+    $output = '002840';
 
-    $hsl_color_end = 30;
-    $hsl_color_start = 0;
+    if ($percentage < 1) {
+      $color_array = $this->getColorPlateRgb();
+      $num_of_color = count($color_array);
+    }
+dpm($percentage);
+    return $output;
+  }
 
-    $hsl_color_angle = ($hsl_color_end - $hsl_color_start) * $percentage;
-    $hsl_value = $hsl_color_start + $hsl_color_angle;
-    $hsl_value = number_format($hsl_value, 2);
-
-    $lightness = number_format(((0.5 - ($percentage / 10)) * 100), 2);
-
-    $saturation = number_format($percentage, 2);
-
-    // $output = 'hsl(' . $hsl_value . ', 100%, 50%)';
-    $output = 'hsl(' . $hsl_value . ', 100%, ' . $lightness . '%)';
-    // $output = 'hsl(' . $hsl_value . ', '. $saturation . '%, ' . $lightness . '%)';
+  /**
+   * @see color plate http://www.rapidtables.com/web/color/RGB_Color.htm
+   */
+  public function getColorPlateRgb() {
+    $output = array(
+      'ff3333',
+      'ff9933',
+      'ffff33',
+      '99ff33',
+      '33ff33',
+      '33ff99',
+      '33ffff',
+      '3399ff',
+      '3333ff',
+      '9933ff',
+    );
 
     return $output;
   }
@@ -73,24 +83,56 @@ class StateinfoSettingService {
   /**
    *
    */
-  public function getColorPlate() {
-    // default color #002840
-    $output = 'hsl(203, 100%, 12.5%)';
+  public function getColorRgbArray() {
+    $output = array();
 
-    $hsl_color_end = 30;
-    $hsl_color_start = 0;
-
-    $hsl_color_angle = ($hsl_color_end - $hsl_color_start) * $percentage;
-    $hsl_value = $hsl_color_start + $hsl_color_angle;
-    $hsl_value = number_format($hsl_value, 2);
-
-    $lightness = number_format(((0.5 - ($percentage / 10)) * 100), 2);
-
-    $saturation = number_format($percentage, 2);
-
-    // $output = 'hsl(' . $hsl_value . ', 100%, 50%)';
-    $output = 'hsl(' . $hsl_value . ', 100%, ' . $lightness . '%)';
-    // $output = 'hsl(' . $hsl_value . ', '. $saturation . '%, ' . $lightness . '%)';
+    $colors = array(50, 70, 90, 110, 120);
+    $low = 0;
+    $high = 255;
+    $grey = 240;
+    for ($i = 0; $i < 128; $i++) {
+      /** Red */
+      if ($i < $colors[0]) {
+        $R = $grey + ($low - $grey) * $i / $colors[0];
+      }
+      elseif ($i < $colors[2]) {
+        $R = $low;
+      }
+      elseif ($i < $colors[3]) {
+        $R = $low + ($high - $low) * ($i - $colors[2]) / ($colors[3] - $colors[2]);
+      }
+      else {
+        $R = $high;
+      }
+      /** Green */
+      if ($i < $colors[0]) {
+        $G = $grey + ($low - $grey) * $i / $colors[0];
+      }
+      elseif ($i < $colors[1]) {
+        $G = $low + ($high - $low) * ($i - $colors[0]) / ($colors[1] - $colors[0]);
+      }
+      elseif ($i < $colors[3]) {
+        $G = $high;
+      }
+      else {
+        $G = $high - ($high - $low) * ($i - $colors[3]) / (127 - $colors[3]);
+      }
+      /** Blue */
+      if ($i < $colors[0]) {
+        $B = $grey + ($high - $grey) * $i / $colors[0];
+      }
+      elseif ($i < $colors[1]) {
+        $B = $high;
+      }
+      elseif ($i < $colors[2]) {
+        $B = $high - ($high - $low) * ($i - $colors[1]) / ($colors[2] - $colors[1]);
+      }
+      else {
+        $B = $low;
+      }
+      echo "R:".(int)$R.";&nbsp;&nbsp;&nbsp;&nbsp;G:".(int)$G.";&nbsp;&nbsp;&nbsp;&nbsp;B:".(int)$B;
+      echo "<br />";
+    }
 
     return $output;
   }
