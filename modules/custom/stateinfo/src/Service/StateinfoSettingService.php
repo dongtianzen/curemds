@@ -66,11 +66,10 @@ class StateinfoSettingService {
       $step = 1;
 
       if ($range > 0) {
-        $percentage = 1 / ($diff / $range);
-        if ($percentage > 1) {
-          $percentage = 1;
-        }
-        dpm($diff . ' - - - ' . $min . ' - - - ' . $percentage);
+        $step = ($diff / $range);
+        $percentage = $result_value/ $min / $step;
+
+        // dpm($diff . ' - - - ' . $min . ' - - - ' . $step . ' - - - ' . $percentage);
         $output = $this->getColorRgbValueByPercentageStep($percentage);
       }
     }
@@ -115,15 +114,18 @@ class StateinfoSettingService {
   public function getColorPlateRgb() {
     $output = array(
       'ff3333',
+      'ff6633',
       'ff9933',
       // 'ffff33',   // yellow
-      '99ff33',
-      '33ff33',   // green
+      // '99ff33',      // green
+      '66ff33',
+      // '33ff33',
       '33ff99',
-      '33ffff',
-      '3399ff',
+      '33ffff',      // blue
+      // '3399ff',
+      '3366ff',
       '3333ff',
-      '9933ff',
+      '9933ff',      // purple
     );
 
     return $output;
