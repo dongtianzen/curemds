@@ -63,13 +63,11 @@ class StateinfoSettingService {
 
       $range = $max - $min;
       $average = ($max + $min) / 2;
-      $step = 1;
 
       if ($range > 0) {
-        $step = ($diff / $range);
-        $percentage = $result_value/ $min / $step;
+        $percentage = ($result_value / $min) + (($average - $min) / $average);
 
-        // dpm($diff . ' - - - ' . $min . ' - - - ' . $step . ' - - - ' . $percentage);
+        dpm($result_value . ' - - - ' . $min . ' - - - ' . $percentage);
         $output = $this->getColorRgbValueByPercentageStep($percentage);
       }
     }
@@ -92,14 +90,16 @@ class StateinfoSettingService {
         ->get('flexinfo.calc.service')
         ->getPercentage(1, $num_of_color) / 100;
 
+
+      $color_percentage = $color_percentage_step;
       for ($i = 0; $i < $num_of_color; $i++) {
-        if ($percentage < $color_percentage_step) {
+        dpm($color_percentage);
+        if ($percentage < $color_percentage) {
           $output = $color_array[$i];
 
           break;
         }
-
-        $color_percentage_step += $color_percentage_step;
+        $color_percentage += $color_percentage_step;
       }
     }
 
@@ -113,18 +113,14 @@ class StateinfoSettingService {
    */
   public function getColorPlateRgb() {
     $output = array(
-      'ff3333',
-      'ff6633',
+      'ff3333',      // red
       'ff9933',
-      // 'ffff33',   // yellow
+      'ffff33',   // yellow
       // '99ff33',      // green
-      '66ff33',
+      // '66ff33',
       // '33ff33',
-      '33ff99',
-      '33ffff',      // blue
-      // '3399ff',
-      '3366ff',
-      '3333ff',
+      '33ffff',      // light blue
+      '3399ff',      // blue
       '9933ff',      // purple
     );
 
