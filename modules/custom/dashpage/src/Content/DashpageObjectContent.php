@@ -20,67 +20,6 @@ class DashpageGridContent {
   /**
    * @return array
    */
-  public function tableEventStatus($meeting_nodes = array()) {
-    $output = array();
-
-    if (is_array($meeting_nodes)) {
-      foreach ($meeting_nodes as $node) {
-        $program_entity = \Drupal::getContainer()->get('flexinfo.field.service')->getFieldFirstTargetIdTermEntity($node, 'field_meeting_program');
-
-        $internal_url = Url::fromUserInput('/dashpage/meeting/snapshot/' . $node->id());
-        $url_options = array(
-          'attributes' => array(
-            'class' => array(
-              'color-fff',
-            ),
-          ),
-        );
-        $internal_url->setOptions($url_options);
-
-        $status_button = '<span class="width-96 height-24 color-fff float-left line-height-24 text-center ' .  \Drupal::getContainer()->get('flexinfo.node.service')->getMeetingStatusColor($node) . '">';
-          $status_button .= \Drupal::l(
-            \Drupal::getContainer()->get('flexinfo.node.service')->getMeetingStatus($node),
-            $internal_url
-          );
-        $status_button .= '</span>';
-
-        $program_text = '';
-        $get_program_name = $program_entity->getName();
-        if(strlen($get_program_name) > 40) {
-          $program_text  = '<span class="table-tooltip width-180">';
-            $program_text .= Unicode::substr($program_entity->getName(), 0, 40) . '...';
-            $program_text .= '<span class="table-tooltip-text">';
-              $program_text .= $program_entity->getName();
-            $program_text .= '</span>';
-          $program_text .= '</span>';
-        }
-        else {
-          $program_text .= $program_entity->getName();
-        }
-
-        $date_text  = '<span class="width-90 float-left">';
-          $date_text .= \Drupal::getContainer()->get('flexinfo.field.service')->getFieldFirstValueDateFormat($node, 'field_meeting_date');
-        $date_text .= '</span>';
-
-        $output[] = array(
-          // 'REGION' => \Drupal::getContainer()->get('flexinfo.field.service')->getFieldFirstTargetIdTermName($node, 'field_meeting_eventregion'),
-          'DATE' => $date_text,
-          'PROGRAM' => $program_text,
-          'THERAPEUTIC AREA' => \Drupal::getContainer()->get('flexinfo.field.service')->getFieldFirstTargetIdTermName($program_entity, 'field_program_theraparea'),
-          'PROVINCE' => \Drupal::getContainer()->get('flexinfo.field.service')->getFieldFirstTargetIdTermName($node, 'field_meeting_province'),
-          'CITY' => \Drupal::getContainer()->get('flexinfo.field.service')->getFieldFirstTargetIdTermName($node, 'field_meeting_city'),
-          'REP' => \Drupal::getContainer()->get('flexinfo.field.service')->getFieldFirstTargetIdUserName($node, 'field_meeting_representative'),
-          'STATUS' => $status_button,
-        );
-      }
-    }
-
-    return $output;
-  }
-
-  /**
-   * @return array
-   */
   public function getCustomitemNodes($section, $entity_id) {
     $query_container = \Drupal::getContainer()->get('flexinfo.querynode.service');
     $query = $query_container->queryNidsByBundle('record');
@@ -283,30 +222,6 @@ class DashpageBlockContent extends DashpageGridContent{
     return $output;
   }
 
-  /**
-   *
-   */
-  public function blockTableEventStatus($meeting_nodes = array(), $entity_id = 'all') {
-    $table_content = \Drupal::getContainer()
-      ->get('flexinfo.chart.service')->convertContentToTableArray($this->tableEventStatus($meeting_nodes));
-
-    $output = $this->blockTableGenerate($table_content, t('Event Status'));
-
-    return $output;
-  }
-
-  /**
-   *
-   */
-  public function blockTableCustomitem($section, $entity_id = 'all') {
-    $table_content = \Drupal::getContainer()
-      ->get('flexinfo.chart.service')->convertContentToTableArray($this->tableCustomitem($section, $entity_id));
-
-    $output = $this->blockTableGenerate($table_content, t('单项指标'));
-
-    return $output;
-  }
-
 }
 
 /**
@@ -350,15 +265,6 @@ class DashpageObjectContent extends DashpageBlockContent {
     $output['contentSection'][] = $this->{$method_name}($meeting_nodes);
     return $output;
   }
-
-  /**
-   * @return datatable
-   */
-  public function eventstatusSnapshotObjectContent($meeting_nodes = array(), $entity_id = NULL) {
-    $output = $this->datatableSnapshotObjectContent($meeting_nodes, $entity_id, 'blockTableEventStatus');
-    return $output;
-  }
-
 
   /**
    * @return php object, not JSON

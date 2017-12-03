@@ -90,7 +90,6 @@ class StateinfoSettingService {
         ->get('flexinfo.calc.service')
         ->getPercentage(1, $num_of_color) / 100;
 
-
       $color_percentage = $color_percentage_step;
       for ($i = 0; $i < $num_of_color; $i++) {
         dpm($color_percentage);
