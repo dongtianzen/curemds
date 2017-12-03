@@ -222,6 +222,18 @@ class DashpageBlockContent extends DashpageGridContent{
     return $output;
   }
 
+  /**
+   *
+   */
+  public function blockTableCustomitem($section, $entity_id = 'all') {
+    $table_content = \Drupal::getContainer()
+      ->get('flexinfo.chart.service')->convertContentToTableArray($this->tableCustomitem($section, $entity_id));
+
+    $output = $this->blockTableGenerate($table_content, t('单项指标'));
+
+    return $output;
+  }
+
 }
 
 /**

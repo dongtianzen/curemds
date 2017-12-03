@@ -21,12 +21,14 @@ class StateinfoSettingService {
 
     $min = \Drupal::getContainer()->get('flexinfo.field.service')
       ->getFieldFirstValue($term, 'field_item_minimun');
+    $max = \Drupal::getContainer()->get('flexinfo.field.service')
+      ->getFieldFirstValue($term, 'field_item_maximun');
+
+      dpm('$min - ' . $min );
+      dpm('$max - ' . $max );
 
     if ($result_value < $min) {
       $diff = $min - $result_value;
-
-      $max = \Drupal::getContainer()->get('flexinfo.field.service')
-        ->getFieldFirstValue($term, 'field_item_maximun');
 
       $range = $max - $min;
       $average = ($max + $min) / 2;
