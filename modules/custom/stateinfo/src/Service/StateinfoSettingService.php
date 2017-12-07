@@ -57,19 +57,19 @@ class StateinfoSettingService {
       ->getFieldFirstValue($term, 'field_item_maximun');
 
     if ($result_value >= $min && $result_value <= $max) {
-      // normal color is  #002840
+      // normal color is  #002840 dark black
       $output = '002840';
     }
-    if ($result_value < $min) {
+    else if ($result_value < $min) {
       $diff = $min - $result_value;
 
       $range = $max - $min;
       $average = ($max + $min) / 2;
 
       if ($range > 0) {
-        $percentage = ($result_value / $min) + (($average - $min) / $average);
+        $percentage = (($result_value / $min) + ($result_value / $max)) / 2;
 
-        dpm($result_value . ' - - - ' . $min . ' - - - ' . $percentage);
+        // dpm($result_value . ' - - - ' . $min . ' - - - ' . $percentage);
         $output = $this->getColorRgbValueByPercentageStep($percentage);
       }
     }
@@ -94,7 +94,7 @@ class StateinfoSettingService {
 
       $color_percentage = $color_percentage_step;
       for ($i = 0; $i < $num_of_color; $i++) {
-        dpm($color_percentage);
+        // dpm($color_percentage);
         if ($percentage < $color_percentage) {
           $output = $color_array[$i];
 
@@ -116,7 +116,7 @@ class StateinfoSettingService {
     $output = array(
       'ff3333',      // red
       'ff9933',
-      'ffff33',   // yellow
+      // 'ffff33',   // yellow
       // '99ff33',      // green
       // '66ff33',
       // '33ff33',
