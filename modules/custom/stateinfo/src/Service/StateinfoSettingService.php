@@ -48,14 +48,18 @@ class StateinfoSettingService {
    *
    */
   public function colorRgbValue($result_value, $term) {
-    // default color #002840
-    $output = '002840';
+    // default color is drak pink/
+    $output = 'ff3399';
 
     $min = \Drupal::getContainer()->get('flexinfo.field.service')
       ->getFieldFirstValue($term, 'field_item_minimun');
     $max = \Drupal::getContainer()->get('flexinfo.field.service')
       ->getFieldFirstValue($term, 'field_item_maximun');
 
+    if ($result_value >= $min && $result_value <= $max) {
+      // normal color is  #002840
+      $output = '002840';
+    }
     if ($result_value < $min) {
       $diff = $min - $result_value;
 
@@ -78,7 +82,7 @@ class StateinfoSettingService {
    */
   public function getColorRgbValueByPercentageStep($percentage = 1) {
     // default color #002840
-    $output = '002840';
+    $output = 'ff3399';
 
     if ($percentage < 1) {
       $color_array = $this->getColorPlateRgb();
