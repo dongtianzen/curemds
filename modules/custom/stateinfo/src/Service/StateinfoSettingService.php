@@ -56,9 +56,13 @@ class StateinfoSettingService {
     $max = \Drupal::getContainer()->get('flexinfo.field.service')
       ->getFieldFirstValue($term, 'field_item_maximun');
 
-    if ($result_value >= $min && $result_value <= $max) {
+    if ($result_value > $max) {
       // normal color is  #002840 dark black
-      $output = '002840';
+      $output = '#ff00ff';
+    }
+    else if ($result_value >= $min && $result_value <= $max) {
+      // normal color is  #002840 dark black
+      $output = '#002840';
     }
     else if ($result_value < $min) {
       $diff = $min - $result_value;

@@ -588,6 +588,14 @@ class TerminfoJsonController extends ControllerBase {
     if ($term) {
       $output = '<div class="" style="color:' . $colorHslValue . '">';
         $output .= $result_value;
+
+        $max = \Drupal::getContainer()->get('flexinfo.field.service')
+          ->getFieldFirstValue($term, 'field_item_maximun');
+
+        if ($result_value > $max) {
+          $output .= '*';
+        }
+
       $output .= '</div>';
     }
 
