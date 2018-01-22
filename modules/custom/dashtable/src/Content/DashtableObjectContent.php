@@ -120,8 +120,26 @@ class DashtableGridData {
       foreach ($meeting_nodes as $node) {
 
         $output[] = array(
-          'DATE' => \Drupal::getContainer()->get('flexinfo.field.service')->getFieldFirstValue($node, 'field_record_date'),
-          'neut' => \Drupal::getContainer()->get('flexinfo.field.service')->getFieldFirstValue($node, 'field_record_neut'),
+          // \Drupal::getContainer()->get('flexinfo.field.service')->getFieldFirstValue($node, 'field_record_date'),
+          \Drupal::getContainer()->get('flexinfo.field.service')->getFieldFirstValue($node, 'field_record_neut'),
+        );
+      }
+    }
+
+    return $output;
+  }
+  /**
+   * @return array
+   */
+  public function tableViewRecord2($meeting_nodes = array()) {
+    $output = array();
+
+    if (is_array($meeting_nodes)) {
+      foreach ($meeting_nodes as $node) {
+
+        $output[] = array(
+          \Drupal::getContainer()->get('flexinfo.field.service')->getFieldFirstValue($node, 'field_record_date'),
+          // \Drupal::getContainer()->get('flexinfo.field.service')->getFieldFirstValue($node, 'field_record_neut'),
         );
       }
     }
@@ -134,6 +152,7 @@ class DashtableGridData {
    */
   public function dataViewRecord($meeting_nodes = array()) {
     $tbody = $this->tableViewRecord($meeting_nodes);
+    $tbody2 = $this->tableViewRecord2($meeting_nodes);
 
     $output = array(
       "thead" => [
@@ -142,7 +161,8 @@ class DashtableGridData {
           "中性粒细胞总数",
         ]
       ],
-      "tbody" => $tbody
+      "tbody" => $tbody,
+      "tbody2" => $tbody2
     );
 
     return $output;

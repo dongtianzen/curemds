@@ -28,8 +28,17 @@ class DashtableController extends ControllerBase {
    * {@inheritdoc}
    */
   public function standardJson($section, $entity_id, $start, $end) {
-    $FlextableController = new FlextableController();
-    return $FlextableController->standardJson($section, $entity_id, $start, $end);
+    $object_content_data = $this->standardTableContent($section, $entity_id, $start, $end);
+
+    return new JsonResponse($object_content_data);
+
+    // debug output as JSON format
+    $build = array(
+      '#type' => 'markup',
+      '#markup' => json_encode($object_content_data),
+    );
+
+    return $build;
   }
 
   /**
@@ -49,9 +58,18 @@ class DashtableController extends ControllerBase {
   /**
    * {@inheritdoc}
    */
-  public function standardTable($section, $entity_id, $start, $end) {
+  public function standardTableContent($section, $entity_id, $start, $end) {
     $DashtableObjectContent = new DashtableObjectContent();
-    $object_content_data = $DashtableObjectContent->standardSnapshotObjectContent(strtolower($section), $entity_id);
+    $output = $DashtableObjectContent->standardSnapshotObjectContent(strtolower($section), $entity_id);
+
+    return $output;
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function standardTable($section, $entity_id, $start, $end) {
+    $object_content_data = $this->standardTableContent(strtolower($section), $entity_id);
 
     $FlexpageController = new FlexpageController();
     $build = $FlexpageController->angularSnapshotTemplate($object_content_data);
