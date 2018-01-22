@@ -27,35 +27,6 @@ class DashtableController extends ControllerBase {
   /**
    * {@inheritdoc}
    */
-  public function standardPath($section) {
-    if ($section) {
-      switch ($section) {
-        case 'angular':
-        case 'emptyangular':
-        case 'evaluation':
-        case 'evaluationform':
-        case 'meeting':
-
-        // user
-        case 'speakersummary':
-        case 'userlist':
-
-        // datatable
-        case 'eventstatus':
-          break;
-
-        default:
-          \Drupal::getContainer()->get('flexinfo.setting.service')->throwExceptionPage(404);
-          break;
-      }
-    }
-
-    return TRUE;
-  }
-
-  /**
-   * {@inheritdoc}
-   */
   public function standardJson($section, $entity_id, $start, $end) {
     $FlextableController = new FlextableController();
     return $FlextableController->standardJson($section, $entity_id, $start, $end);
