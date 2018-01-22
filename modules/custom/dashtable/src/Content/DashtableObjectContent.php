@@ -113,50 +113,16 @@ class DashtableGridData {
   /**
    * @return array
    */
-  public function tableViewEvents($meeting_nodes = array()) {
+  public function tableViewRecord($meeting_nodes = array()) {
     $output = array();
 
     if (is_array($meeting_nodes)) {
       foreach ($meeting_nodes as $node) {
-        $program_entity = \Drupal::getContainer()->get('flexinfo.field.service')->getFieldFirstTargetIdTermEntity($node, 'field_meeting_program');
 
-        if ($program_entity) {
-          $internal_url = Url::fromUserInput('/dashpage/meeting/snapshot/' . $node->id());
-          $view_button = \Drupal::l(t('View'), $internal_url);
-
-          $date_text  = '<span class="width-90 float-left">';
-            $date_text .= \Drupal::getContainer()->get('flexinfo.field.service')->getFieldFirstValueDateFormat($node, 'field_meeting_date');
-          $date_text .= '</span>';
-
-          $program_text = $program_entity->getName();
-
-          if(strlen($program_text) > 25) {
-            $program_text  = '<span class="table-tooltip width-140">';
-              $program_text .= Unicode::substr($program_entity->getName(), 0, 25) . '...';
-              $program_text .= '<span class="table-tooltip-text">';
-                $program_text .= $program_entity->getName();
-              $program_text .= '</span>';
-            $program_text .= '</span>';
-          }
-
-          $status_button = '<span class="color-fff">';
-            $status_button .= '<i class="fa ' . \Drupal::getContainer()->get('flexinfo.node.service')->getMeetingStatusIcon($node) . ' fa-lg color-';
-              $status_button .= \Drupal::getContainer()->get('flexinfo.node.service')->getMeetingStatusColorCode($node);
-              $status_button .= '" aria-hidden="true">';
-            $status_button .= '</i>';
-          $status_button .= '</span>';
-
-          $output[] = array(
-            'DATE' => $date_text,
-            'PROGRAM' => $program_text,
-            'REP' => \Drupal::getContainer()->get('flexinfo.field.service')->getFieldFirstTargetIdUserName($node, 'field_meeting_rep'),
-            'SPEAKER' => \Drupal::getContainer()->get('flexinfo.field.service')->getFieldFirstTargetIdUserName($node, 'field_meeting_speaker'),
-            'HCP Reach' => \Drupal::getContainer()->get('flexinfo.field.service')->getFieldFirstValue($node, 'field_meeting_signature'),
-            'Responses' => \Drupal::getContainer()->get('flexinfo.field.service')->getFieldFirstValue($node, 'field_meeting_evaluationnum'),
-            'STATUS' => $status_button,
-            'VIEW' => $view_button,
-          );
-        }
+        $output[] = array(
+          'DATE' => \Drupal::getContainer()->get('flexinfo.field.service')->getFieldFirstValue($node, 'field_record_date'),
+          'neut' => \Drupal::getContainer()->get('flexinfo.field.service')->getFieldFirstValue($node, 'field_record_neut'),
+        );
       }
     }
 
@@ -166,32 +132,14 @@ class DashtableGridData {
   /**
    *
    */
-  public function dataViewEvents($meeting_nodes = array()) {
-    // for ($i = 0; $i < 20; $i++) {
-    //   $tbody[] = [
-    //     '10/31/2017',
-    //     'Program Name',
-    //     "Rep Name",
-    //     "Speaker",
-    //     rand(3, 20),
-    //     rand(3, 20),
-    //     'Status',
-    //     'View'
-    //   ];
-    // }
-    $tbody = $this->tableViewEvents($meeting_nodes);
+  public function dataViewRecord($meeting_nodes = array()) {
+    $tbody = $this->tableViewRecord($meeting_nodes);
 
     $output = array(
       "thead" => [
         [
           "Date",
-          "Program Name",
-          "Rep Name",
-          "Speaker",
-          "HCP Reach",
-          "Responses",
-          "Status",
-          "View",
+          "中性粒细胞总数",
         ]
       ],
       "tbody" => $tbody
@@ -379,28 +327,15 @@ class DashtableObjectContent extends DashtableFeatureContent {
     return $output;
   }
 
-  /**
-   * {@inheritdoc}
-   */
-  public function programSnapshotObjectContent($section, $entity_id) {
-    $table_data = $this->termProgram();
-    $output = $this->commonVidSnapshotObjectContent($section, $entity_id, $table_data);
-
-    return $output;
-  }
-
   /** - - - - - - table - - - - - - - - - - - - - - - - - - - - - - - - - -  */
 
   /**
    * {@inheritdoc}
    */
-  public function vieweventsSnapshotObjectContent($section = NULL, $entity_id = NULL, $start = NULL, $end = NULL) {
-    $DashpageObjectContent = new DashpageObjectContent();
-    $meeting_nodes = $DashpageObjectContent->querySnapshotMeetingsNodes($section, $entity_id, $start, $end);
+  public function viewrecordSnapshotObjectContent($section = NULL, $entity_id = NULL, $start = NULL, $end = NULL) {
+    $meeting_nodes = \Drupal::getContainer()->get('flexinfo.querynode.service')->nodesByBundle('record');
 
-    $output['fixedSection'] = $this->FlexpageBaseJson->generateTileStyleOne($DashpageObjectContent->pageTopFixedSectionData($meeting_nodes));
-
-    $table_data = $this->dataViewEvents($meeting_nodes);
+    $table_data = $this->dataViewRecord($meeting_nodes);
     $output['contentSection'][] = $this->generateCommonTable($table_data);
     return $output;
   }
