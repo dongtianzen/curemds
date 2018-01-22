@@ -869,58 +869,8 @@ class DashtableObjectContent extends DashtableFeatureContent {
   /**
    * {@inheritdoc}
    */
-  public function businessunitSnapshotObjectContent($section, $entity_id) {
-    $table_data = $this->termBusinessunit();
-    $output = $this->commonVidSnapshotObjectContent($section, $entity_id, $table_data);
-
-    return $output;
-  }
-
-  /**
-   * {@inheritdoc}
-   */
-  public function diseasestateSnapshotObjectContent($section, $entity_id) {
-    $table_data = $this->termDiseasestate();
-    $output = $this->commonVidSnapshotObjectContent($section, $entity_id, $table_data);
-
-    return $output;
-  }
-
-  /**
-   * {@inheritdoc}
-   */
   public function programSnapshotObjectContent($section, $entity_id) {
     $table_data = $this->termProgram();
-    $output = $this->commonVidSnapshotObjectContent($section, $entity_id, $table_data);
-
-    return $output;
-  }
-
-  /**
-   * {@inheritdoc}
-   */
-  public function provinceSnapshotObjectContent($section, $entity_id) {
-    $table_data = $this->termProvince();
-    $output = $this->commonVidSnapshotObjectContent($section, $entity_id, $table_data);
-
-    return $output;
-  }
-
-  /**
-   * {@inheritdoc}
-   */
-  public function questionlibrarySnapshotObjectContent($section, $entity_id) {
-    $table_data = $this->termQuestionlibrary();
-    $output = $this->commonVidSnapshotObjectContent($section, $entity_id, $table_data);
-
-    return $output;
-  }
-
-  /**
-   * {@inheritdoc}
-   */
-  public function therapeuticareaSnapshotObjectContent($section, $entity_id) {
-    $table_data = $this->termTherapeuticarea();
     $output = $this->commonVidSnapshotObjectContent($section, $entity_id, $table_data);
 
     return $output;
