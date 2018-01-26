@@ -113,25 +113,7 @@ class DashtableGridData {
   /**
    * @return array
    */
-  public function tableViewRecord($meeting_nodes = array()) {
-    $output = array();
-
-    if (is_array($meeting_nodes)) {
-      foreach ($meeting_nodes as $node) {
-
-        $output[] = array(
-          // \Drupal::getContainer()->get('flexinfo.field.service')->getFieldFirstValue($node, 'field_record_date'),
-          \Drupal::getContainer()->get('flexinfo.field.service')->getFieldFirstValue($node, 'field_record_neut'),
-        );
-      }
-    }
-
-    return $output;
-  }
-  /**
-   * @return array
-   */
-  public function tableViewRecord2($meeting_nodes = array()) {
+  public function tableViewRecord($meeting_nodes = array(), $field = 'field_record_date') {
     $output = array();
 
     if (is_array($meeting_nodes)) {
@@ -139,7 +121,25 @@ class DashtableGridData {
 
         $output[] = array(
           \Drupal::getContainer()->get('flexinfo.field.service')->getFieldFirstValue($node, 'field_record_date'),
-          // \Drupal::getContainer()->get('flexinfo.field.service')->getFieldFirstValue($node, 'field_record_neut'),
+          \Drupal::getContainer()->get('flexinfo.field.service')->getFieldFirstValue($node, $field),
+        );
+      }
+    }
+
+    return $output;
+  }
+
+  /**
+   * @return array
+   */
+  public function jsonSingleRecord($meeting_nodes = array(), $field = 'field_record_date') {
+    $output = array();
+
+    if (is_array($meeting_nodes)) {
+      foreach ($meeting_nodes as $node) {
+
+        $output[] = array(
+          \Drupal::getContainer()->get('flexinfo.field.service')->getFieldFirstValue($node, $field),
         );
       }
     }
@@ -151,8 +151,6 @@ class DashtableGridData {
    *
    */
   public function dataViewRecord($meeting_nodes = array()) {
-    $tbody = $this->tableViewRecord($meeting_nodes);
-    $tbody2 = $this->tableViewRecord2($meeting_nodes);
 
     $output = array(
       "thead" => [
@@ -161,9 +159,21 @@ class DashtableGridData {
           "中性粒细胞总数",
         ]
       ],
-      "tbody" => $tbody,
-      "tbody2" => $tbody2
     );
+    $output["tbody"] = $this->tableViewRecord($meeting_nodes, 'field_record_neut');
+
+    $output['date'] = $this->jsonSingleRecord($meeting_nodes);
+    $output['neut'] = $this->jsonSingleRecord($meeting_nodes, 'field_record_neut');
+
+    return $output;
+  }
+
+  /**
+   *
+   */
+  public function dataRecordJson($meeting_nodes = array()) {
+    $output['date'] = $this->jsonSingleRecord($meeting_nodes);
+    $output['neut'] = $this->jsonSingleRecord($meeting_nodes, 'field_record_neut');
 
     return $output;
   }
@@ -357,6 +367,16 @@ class DashtableObjectContent extends DashtableFeatureContent {
 
     $table_data = $this->dataViewRecord($meeting_nodes);
     $output['contentSection'][] = $this->generateCommonTable($table_data);
+    return $output;
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function recordjsonSnapshotObjectContent($section = NULL, $entity_id = NULL, $start = NULL, $end = NULL) {
+    $meeting_nodes = \Drupal::getContainer()->get('flexinfo.querynode.service')->nodesByBundle('record');
+    $output = $this->dataRecordJson($meeting_nodes);
+
     return $output;
   }
 

@@ -69,7 +69,7 @@ class DashtableController extends ControllerBase {
    * {@inheritdoc}
    */
   public function standardTable($section, $entity_id, $start, $end) {
-    $object_content_data = $this->standardTableContent(strtolower($section), $entity_id);
+    $object_content_data = $this->standardTableContent(strtolower($section), $entity_id, $start, $end);
 
     $FlexpageController = new FlexpageController();
     $build = $FlexpageController->angularSnapshotTemplate($object_content_data);
