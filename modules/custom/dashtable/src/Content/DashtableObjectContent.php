@@ -162,9 +162,6 @@ class DashtableGridData {
     );
     $output["tbody"] = $this->tableViewRecord($meeting_nodes, 'field_record_neut');
 
-    $output['date'] = $this->jsonSingleRecord($meeting_nodes);
-    $output['neut'] = $this->jsonSingleRecord($meeting_nodes, 'field_record_neut');
-
     return $output;
   }
 
@@ -172,8 +169,24 @@ class DashtableGridData {
    *
    */
   public function dataRecordJson($meeting_nodes = array()) {
+    $terms = \Drupal::getContainer()->get('flexinfo.term.service')->getFullTermsFromVidName('item');;
+
+    foreach ($terms as $term) {
+
+      $abbrevname = strtolower(\Drupal::getContainer()->get('flexinfo.field.service')->getFieldFirstValue($term, 'field_item_abbrevname'));
+      $abbrevname = \Drupal::getContainer()->get('stateinfo.setting.service')->convertTermAbbNameToStandardName($abbrevname);
+
+      $output['term'][] = array(
+        $abbrevname => $term->getName(),
+      );
+
+      $field_item_abbrevname = 'field_record_' . $abbrevname;
+
+      // $output['neut'] = $this->jsonSingleRecord($meeting_nodes, 'field_record_neut');
+      $output[$abbrevname] = $this->jsonSingleRecord($meeting_nodes, $field_item_abbrevname);
+    }
+
     $output['date'] = $this->jsonSingleRecord($meeting_nodes);
-    $output['neut'] = $this->jsonSingleRecord($meeting_nodes, 'field_record_neut');
 
     return $output;
   }
