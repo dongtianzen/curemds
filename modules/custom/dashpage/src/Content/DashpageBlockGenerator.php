@@ -307,22 +307,26 @@ class DashpageBlockGenerator extends ControllerBase {
           $output .= '<table id="php-table-list" class="stripe responsive no-wrap display-none">';
             $output .= '<thead>';
               $output .= '<tr>';
-              foreach ($table_content as $array_key => $array_content) {
-                foreach ($array_content as $key => $value) {
-                  $output .= '<th>' . $key . '</th>';
+              if ($table_content) {
+                foreach ($table_content as $array_key => $array_content) {
+                  foreach ($array_content as $key => $value) {
+                    $output .= '<th>' . $key . '</th>';
+                  }
+                  break;
                 }
-                break;
               }
               $output .= '</tr>';
             $output .= '</thead>';
 
             $output .= '<tbody>';
-            foreach ($table_content as $array_key => $array_content) {
-              $output .= '<tr>';
-                foreach ($array_content as $key => $value) {
-                  $output .= '<td>' . $value . '</td>';
-                }
-              $output .= '</tr>';
+            if ($table_content) {
+              foreach ($table_content as $array_key => $array_content) {
+                $output .= '<tr>';
+                  foreach ($array_content as $key => $value) {
+                    $output .= '<td>' . $value . '</td>';
+                  }
+                $output .= '</tr>';
+              }
             }
             $output .= '</tbody>';
           $output .= '</table>';

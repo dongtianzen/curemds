@@ -44,7 +44,7 @@ class TerminfoJsonController extends ControllerBase {
    * @param $vid is vid
    * @return php array
    */
-  public function basicCollectionContent($section, $entity_id) {
+  public function basicCollectionContent($section, $entity_id, $start, $end) {
     $section = strtolower($section);
 
     switch ($section) {
@@ -427,7 +427,7 @@ class TerminfoJsonController extends ControllerBase {
   /**
    *
    */
-  public function recordAllList($entity_bundle, $entity_id = NULL) {
+  public function recordAllList($entity_bundle, $entity_id = NULL, $start, $end) {
     $result = NULL;
 
     if ($entity_id) {
