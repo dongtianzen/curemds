@@ -132,12 +132,28 @@ class DashtableGridData {
   /**
    * @return array
    */
+  public function jsonSingleRecordAsNumber($meeting_nodes = array(), $field = 'field_record_neut') {
+    $output = array();
+
+    if (is_array($meeting_nodes)) {
+      foreach ($meeting_nodes as $node) {
+        $output[] = array(
+          (float)\Drupal::getContainer()->get('flexinfo.field.service')->getFieldFirstValue($node, $field),
+        );
+      }
+    }
+
+    return $output;
+  }
+
+  /**
+   * @return array
+   */
   public function jsonSingleRecord($meeting_nodes = array(), $field = 'field_record_date') {
     $output = array();
 
     if (is_array($meeting_nodes)) {
       foreach ($meeting_nodes as $node) {
-
         $output[] = array(
           \Drupal::getContainer()->get('flexinfo.field.service')->getFieldFirstValue($node, $field),
         );
@@ -182,8 +198,7 @@ class DashtableGridData {
 
       $field_item_abbrevname = 'field_record_' . $abbrevname;
 
-      // $output['neut'] = $this->jsonSingleRecord($meeting_nodes, 'field_record_neut');
-      $output[$abbrevname] = $this->jsonSingleRecord($meeting_nodes, $field_item_abbrevname);
+      $output[$abbrevname] = $this->jsonSingleRecordAsNumber($meeting_nodes, $field_item_abbrevname);
     }
 
     $output['date'] = $this->jsonSingleRecord($meeting_nodes);
