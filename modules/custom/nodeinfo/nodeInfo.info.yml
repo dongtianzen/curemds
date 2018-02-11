@@ -1,0 +1,5 @@
+name: NodeInfo
+description: 'NodeInfo Module'
+type: module
+core: 8.x
+package: Zen

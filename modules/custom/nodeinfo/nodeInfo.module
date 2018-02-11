@@ -1,0 +1,29 @@
+<?php
+
+/**
+ * @file
+ */
+
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Url;
+use Drupal\node\NodeInterface;
+
+/**
+ * @Implements hook_form_FORM_ID_alter()
+ */
+function nodeinfo_form_node_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+
+    $form['title']['#access'] = FALSE;
+    $form['#entity_builders'][] = '_nodeinfo_node_recorder_title_builder';
+}
+/**
+ *
+ */
+function _nodeinfo_node_recorder_title_builder($entity_type, NodeInterface $node, $form, FormStateInterface $form_state) {
+  dpm($entity_type);
+  dpm($node->field_record_hospital);
+    $date_of_meeting = $node->field_record_date->date->format('Y-m-d');
+  dpm($date_of_meeting);
+    $node->setTitle('Agenda for meeting on '.$date_of_meeting);
+}
